@@ -1,0 +1,17 @@
+.light-gallery__modal{
+    background: rgba(0, 0, 0,0.85) !important;
+    z-index: 1120;
+  }
+  
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .light-gallery__modal{ 
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+    }
+
+  }
+
+
+.sticky-top{
+    z-index: 999;
+}
