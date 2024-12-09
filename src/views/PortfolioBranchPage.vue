@@ -12,18 +12,23 @@
                     <Baloons style="position: absolute; right: 0;z-index: 10;" />
                 </div>
 
-                <LightGallery :images="page.imgs" :index="idx" :disable-scroll="true" @close="idx = null" />
+                <!-- <LightGallery :images="page.imgs" :index="idx" :disable-scroll="true" @close="idx = null" /> -->
 
                 <div class="row">
                     <div class="col-11">
 
                         <div class="row">
-                            <div class="col-4 col-thumbnail" v-for="(img) in page.thumbnails" :key="img.index"
-                                @click="idx = img.index">
-                                <img :src="img.url" class="img-fluid thumbnail" />
+                            
+                            <FsLightbox
+                                :toggler="toggler"
+                                :sources="page.imgs"
+                            />
+                            
+                            <div class="col-4 col-thumbnail" v-for="(img) in page.images" :key="img.index"
+                                @click="openLightboxOnSlide(img.index)">
+                                <img :src="img.thumbnail" class="img-fluid thumbnail" />
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -45,13 +50,15 @@ import InvestycjePrywatne from "@/data/pages/InvestycjePrywatne.js";
 // };
 
 
-import { LightGallery } from "vue-light-gallery";
+import FsLightbox from "fslightbox-vue/v3";
 
 // let wait = async (miliseconds) => {
 //     return new Promise((resolve) => {
 //         setTimeout(resolve, miliseconds);
 //     });
 // };
+
+// import VuePictureSwipe from 'vue3-picture-swipe';
 
 const pageValues = {
     'Biuro': Biuro,
@@ -68,17 +75,20 @@ const getPageData = (branch, p) => {
 
     let page = branch.catalog.filter(item => item.key == p)[0];
 
-    return { ...branch, 'page': { ...page }, idx: null };
+    return { ...branch, 'page': { ...page }, idx: null, toggler: false };
 }
 
 export default {
     name: "ProtfolioBranchPage",
-    components: { Baloons, LightGallery },
+    components: { Baloons, FsLightbox },
     data: function () {
         return getPageData(this.$route.params.branch, this.$route.params.page);
     },
     methods: {
-
+        openLightboxOnSlide: function(number) {
+				this.slide = number;
+				this.toggler = !this.toggler;
+			}
     },
 
 };

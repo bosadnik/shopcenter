@@ -57,8 +57,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             <div class="row">
               <div class="col-1" style=""></div>
               <div class="col" style="padding-top: 4vh;padding-bottom: 4vh; height: 26vh">
-                <h1 class="white h0" style="text-transform: uppercase;">Producent mebli<BR />
-                  z pasji…
+                <h1 class="white h0" style="text-transform: uppercase;">{{$t('home.producentMebli')}}<BR />
+                  {{$t('home.zPasji')}}
                 </h1>
               </div>
             </div>
@@ -99,14 +99,10 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
               </div>
               <div class="col" style="background-color: black; padding: 3vw; padding-right: 6vw;">
-                <h1 class="h0">Meble od A<span style="font-size: 0.5em">ranżacji</span> do <span
-                    style="font-size: 0.5em">monta</span>Ż !</h1>
-                <p>
-                  Bez względu na to, czy aranżujesz niewielką przestrzeń zacisza domowego czy kompleksowy obiekt
-                  biznesowy, nasze meble z pewnością będą jej idealnym dopełnieniem.
+                <h1 class="h0" v-html="$t('home.mebleOdAdoZ')"></h1>
+                <p>{{$t('home.bezwgledu')}}
                   <br />
-                  Zobacz, jak w kilku krokach zrealizujemy Twoją wizję.
-
+                  {{$t('home.zobacz')}}
                 </p>
 
               </div>
@@ -139,28 +135,21 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         <div class="row" style="padding-top: 3vh; height: 38vh; padding-left:3vw; padding-right:3vw">
           <div class="col-1"></div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">1.</span> KONSULTACJA</h5>
-            Poprosimy Cię o zdjęcia Twoich inspiracji. Omówimy Twoje potrzeby i oczekiwania. Nasz projektant pomoże Ci
-            dobrać każdy element pod względem funkcjonalnym i estetycznym
+            <h5><span class="fontRed">1.</span> {{$t('home.konsultacja')}}</h5>
+            {{$t('home.konsultacjaText')}}
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">2.</span> KONCEPCJA</h5>
-            Na podstawie zebranych informacji przygotujemy projekt i wizualizację. Wybierzemy najbardziej dogodną
-            propozycję i wstępną wycenę. To idealny czas na ewentualne poprawki.
+            <h5><span class="fontRed">2.</span> {{$t('home.koncepcja')}}</h5>
+            {{$t('home.koncepcjaText')}}
 
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">3.</span> PROJEKT</h5>
-            Jeżeli sytuacja tego wymaga, zatwierdzony projekt sprawdzamy pod kątem technicznym na miejscu inwestycji –
-            pozwoli nam to uniknąć pomyłek i dodatkowych kosztów.
-            Po tym etapie otrzymujesz ostateczną wycenę.
-
+            <h5><span class="fontRed">3.</span> {{$t('home.projekt')}}</h5>
+            {{$t('home.projektText')}}
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">4.</span> REALIZACJA</h5>
-            Po podpisaniu umowy nasi stolarze biorą się do pracy!
-            Jeszcze tylko montaż i możesz cieszyć się wnętrzem dopasowanym do Ciebie.
-
+            <h5><span class="fontRed">4.</span> {{$t('home.realizacja')}}</h5>
+            {{$t('home.realizacjaText')}}
           </div>
           <div class="col-1"></div>
         </div>
@@ -185,9 +174,9 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
           }">
             <h1 class="h0" style="margin-left: -4vw; line-height: 0.6em;">
-              <span style="font-size: 0.4em">KONSTRUKCJE</span>
+              <span style="font-size: 0.4em">{{$t('home.konstrukcje')}}</span>
               <BR />
-              STALOWE
+              {{$t('home.stalowe')}}
             </h1>
           </div>
           <div class="col-3" :style="{
@@ -217,26 +206,9 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         <div class="row" style="height: 35vh; background-color: black;">
           <div class="col-1"></div>
           <div class="col-5" style="padding-top: 2vh">
-            Stal jest materiałem konstrukcyjnym dającym niezmiernie dużą dowolność w procesie tworzenia. To głównie z
-            tego powodu oraz dzięki wiedzy, doświadczeniu, a także zaangażowaniu wysoce wykwalifikowanych rzemieślników,
-            konstrukcje mebli, które tworzymy łączą w sobie niesamowicie interesujący design z ważną w codziennym
-            użytkowaniu stabilnością i wytrzymałością.
-            Nasze meble trafiają nie tylko do domów i mieszkań, ale przede wszystkim służą jako wyposażenie renomowanych
-            restauracji, firm i organizacji.
-
-
+            {{ $t('home.konstrukcjeStaloweText') }}
           </div>
-          <div class="col-5" style="padding-top: 4vh">
-            Szukasz nietypowych rozwiązań? Skontaktuj się z nami!
-            <ul>
-              <li>balustrady, pergole</li>
-              <li>ścianki ażurowe </li>
-              <li>regały, szafki, konsole</li>
-              <li>siedziska, hokery</li>
-              <li>stelaże pod biurka, stoły i stoliki </li>
-              <li>wieszaki, kwietniki etc. </li>
-            </ul>
-            <span style="display: flex; justify-content: end; font-weight: bold; ">w tym jesteśmy najlepsi!</span>
+          <div class="col-5" style="padding-top: 4vh" v-html="$t('home.szukaszNietypowychRozwiazan')">
           </div>
 
         </div>

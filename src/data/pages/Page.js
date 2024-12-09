@@ -15,6 +15,8 @@ export default class {
 
       item.imgs = [];
       item.thumbnails = [];
+      item.images = [];
+      
 
       let getImageName = (name, size, i, format) => {
         let newName = name.replace("<%size%>", size);
@@ -27,30 +29,32 @@ export default class {
 
       for (let i = 1; i <= item.count; i++) {
         try {
-          item.imgs.push({
-            url: require(`../../assets/portfolio/${item.folder}/${getImageName(
+          item.images.push({
+            src:`/portfolio/${item.folder}/${getImageName(
               item.imagesName,
               item.imagesLargeName,
               i,
               item.imagesFormat
-            )}`),
-            name: `${item.imagesName}${i}.${item.imagesFormat}`,
+            )}`, 
+            thumbnail:`/portfolio/${item.folder}/${getImageName(
+              item.imagesName,
+              item.imagesThumbnailName,
+              i,
+              item.imagesFormat
+            )}`, 
+            title: `${item.imagesName}${i}.${item.imagesFormat}`,
+            w: 2000,
+            h: 2000
           });
+
+          item.imgs.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesLargeName, i, item.imagesFormat)}`);
         } catch (e) {
          // console.log(e);
         }
 
         try {
-          item.thumbnails.push({
-            url: require(`../../assets/portfolio/${item.folder}/${getImageName(
-              item.imagesName,
-              item.imagesThumbnailName,
-              i,
-              item.imagesFormat
-            )}`),
-            name: `${item.imagesName}${i}.${item.imagesFormat}`,
-            index: i - 1,
-          });
+          item.thumbnails.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesThumbnailName,i,item.imagesFormat)}`,
+          );
         } catch (e) {
           //console.log(e);
         }

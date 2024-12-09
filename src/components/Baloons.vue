@@ -15,7 +15,7 @@
         <div :class="{ row: true, balloonsRow: true, active: isCurrentPath(balloon._link)}">
 
           <div :class="['col',balloon._cssClassName, 'balloonBox', 'ballonName']">
-            {{ balloon._name }}
+            {{ $t(`balloons.${balloon._name}`) }}
           </div>
           <div :class="['col', balloon._cssClassName, 'balloonBox']">
 
