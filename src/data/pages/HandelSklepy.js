@@ -137,7 +137,7 @@ let catalog = [
 
 
 export default new Page({
-  title: "Handel-Sklepy",
+  title: "HandelSklepy",
   color: "#c09200",
  catalog
 });

@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row" :style="{ height: '7vh', backgroundColor: `${color}` }">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <h3>{{ title.toUpperCase()  }} - {{ page.name.toUpperCase() }} {{ page.description.toUpperCase() }}</h3>
+                        <h3>{{ $t(`balloons.${title}`) }} - {{ page.name.toUpperCase() }} {{ page.description.toUpperCase() }}</h3>
                     </div>
                 </div>
             

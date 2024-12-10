@@ -79,7 +79,7 @@ let catalog = [
   },
 ]
 export default new Page({
-  title: "Inwestycje Prywatne",
+  title: "InvestycjePrywatne",
   color: "#385723",
   catalog
 //   description,

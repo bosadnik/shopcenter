@@ -172,7 +172,7 @@ export default {
   background-color: #c09200;
 }
 
-.inwestycjeprywatne:hover, .inwestycjeprywatne.ballonName, .active .inwestycjeprywatne {
+.investycjeprywatne:hover, .investycjeprywatne.ballonName, .active .investycjeprywatne  {
   background-color: #385723;
 }
 
