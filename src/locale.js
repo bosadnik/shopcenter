@@ -382,7 +382,24 @@ export default {
 
 
           
+      },
+      kontakt:{
+        dzialhandlowy:`DZIAŁ HANDLOWY`,
+        telefon:`telefon:`,
+        dzialzakupow:`DZIAŁ ZAKUPÓW`,
+        dzialprojektu:`DZIAŁ PROJEKTU`,
+        dzialfinansowy:`DZIAŁ FINANSOWY`,
+        produkcjaimontaz:`PRODUKCJA I MONTAŻ`,
+        skontaktujsieznami:`SKONTAKTUJ SIĘ Z NAMI`,
+        montaz:'montaż',
+        produkcja:'produkcja',
+        imieinazwisko:'Imię i nazwisko',
+        formtelefon:'Telefon',
+        email:'Email',
+        akceptujewarunki:'Wyrażam zgodę na przetwarzanie moich danych osobowych przez SHOPCENTER A. Kusina, P. Iwanek s.c. w celach marketingowych',
+        wyslij:'Wyślij',
       }
+
     },
   },
 };

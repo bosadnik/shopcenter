@@ -22,6 +22,7 @@
                             <FsLightbox
                                 :toggler="toggler"
                                 :sources="page.imgs"
+                                :slide="slide"
                             />
                             
                             <div class="col-4 col-thumbnail" v-for="(img) in page.images" :key="img.index"
@@ -75,7 +76,7 @@ const getPageData = (branch, p) => {
 
     let page = branch.catalog.filter(item => item.key == p)[0];
 
-    return { ...branch, 'page': { ...page }, idx: null, toggler: false };
+    return { ...branch, 'page': { ...page }, idx: null, toggler: false, slide: 0 };
 }
 
 export default {
@@ -86,6 +87,7 @@ export default {
     },
     methods: {
         openLightboxOnSlide: function(number) {
+                this.idx = number;
 				this.slide = number;
 				this.toggler = !this.toggler;
 			}

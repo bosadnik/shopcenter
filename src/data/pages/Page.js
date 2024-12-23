@@ -18,12 +18,13 @@ export default class {
       item.images = [];
       
 
-      let getImageName = (name, size, i, format) => {
+      let getImageName = (name, size, i, format, noSizeInName=false) => {
         let newName = name.replace("<%size%>", size);
         if (name != newName) {
           return `${size}/${newName}_${i}.${format}`;
         } else {
-          return `${size}/${name}_${size}_${i}.${format}`;
+          let sizeInName = noSizeInName ? "" : `_${size}`;
+          return `${size}/${name}${sizeInName}_${i}.${format}`;
         }
       };
 
@@ -34,32 +35,36 @@ export default class {
               item.imagesName,
               item.imagesLargeName,
               i,
-              item.imagesFormat
+              item.imagesFormat,
+              item.noSizeInName
             )}`, 
             thumbnail:`/portfolio/${item.folder}/${getImageName(
               item.imagesName,
               item.imagesThumbnailName,
               i,
-              item.imagesFormat
+              item.imagesFormat,
+              item.noSizeInName
             )}`, 
             title: `${item.imagesName}${i}.${item.imagesFormat}`,
+            index: i,
             w: 2000,
             h: 2000
           });
 
-          item.imgs.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesLargeName, i, item.imagesFormat)}`);
+          item.imgs.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesLargeName, i, item.imagesFormat, item.noSizeInName)}`);
         } catch (e) {
          // console.log(e);
         }
 
         try {
-          item.thumbnails.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesThumbnailName,i,item.imagesFormat)}`,
+          item.thumbnails.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesThumbnailName,i,item.imagesFormat,item.noSizeInName)}`,
           );
         } catch (e) {
           //console.log(e);
         }
+        item.index = i;
       }
-
+      
       return item;
     });
 

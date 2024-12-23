@@ -1,7 +1,100 @@
 import Page from "./Page";
 
 let catalog = [
-    {
+
+  {
+    name:"OTCF S.A.",
+    description:"Kraków, Podgórze",
+    folder:"biura/otcf_sa_krakow_podgorze",
+    img:"OTCF.jpg",
+    count: 86,
+    imagesName: "otcf",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Nowoczesne biuro",
+    description:"Kraków-Śródmieście (Autodesk)",
+    folder:"biura/Autodesk",
+    img:"ad.jpg",
+    count: 51,
+    imagesName: "AD",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+
+  {
+    name:"Biurowiec Fabryczna",
+    description:"Kraków - Śródmieście",
+    folder:"biura/biurowiec_fabryczna_krakow_srodmiescie",
+    img:"P44_ico.jpg",
+    count: 13,
+    imagesName: "p44_logo",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large"
+  },
+  {
+    name:"SMAY",
+    description:"Podłęże",
+    folder:"biura/smay_podleze",
+    img:"SMAY.png",
+    count: 21,
+    imagesName: "Smay_logo",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large"
+
+  },
+
+  {
+    name:"Nowy Styl",
+    description:"Kraków - Prądnik Biały otwarta przestrzeń",
+    folder:"biura/nowy_styl_krakow_pradnik_bialy_open_space",
+    img:"glowne.jpg",
+    count: 5,
+    imagesName: "NS2_logo",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large"
+
+  },
+
+  {
+    name:"Nowy Styl",
+    description:"Kraków-Prądnik Biały, recepcja",
+    folder:"biura/nowy_styl_krakow_pradnik_bialy_recepcja",
+    img:"glowne.png",
+    count: 17,
+    imagesName: "NSJ_logo",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large"
+
+  },
+
+  {
+    name:"Lider branży ubezpieczeniowej",
+    description:"Wrocłas (TUE)",
+    folder:"biura/tue",
+    img:"TUE_logo_medium_5.png",
+    count: 9,
+    imagesName: "TUE_logo",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large"
+  },
+
+
+
+
+
+
+  {
       name:"Przestrzeń Biurowa",
       description:"Bielsko-Biała",
       folder:"biura/przestrzen_biurowa_office_space_bielsko_biala",
@@ -24,55 +117,34 @@ let catalog = [
       imagesLargeName: "large"
 
     },
+  
     {
-      name:"Biurowiec Fabryczna",
-      description:"Kraków - Śródmieście",
-      folder:"biura/biurowiec_fabryczna_krakow_srodmiescie",
-      img:"P44_ico.jpg",
-      count: 13,
-      imagesName: "p44_logo",
+      name:"Przestrzeń Biurowa, kuchnia",
+      description:"Katowice (KKK)",
+      folder:"biura/kkk",
+      img:"kkk.jpg",
+      count: 20,
+      imagesName: "KKK",
+      imagesFormat: "jpg",
+      imagesThumbnailName: "small",
+      imagesLargeName: "large",
+      noSizeInName: true
+    },
+  
+    {
+      name:"Przestrzeń Biurowa, kuchnia",
+      description:"Kraków (KKK)",
+      folder:"biura/kkkkrak",
+      img:"KKK_logo_medium_1.png",
+      count: 4,
+      imagesName: "KKK_logo",
       imagesFormat: "png",
       imagesThumbnailName: "small",
-      imagesLargeName: "large"
-
+      imagesLargeName: "large",
     },
-    {
-      name:"SMAY",
-      description:"Podłęże",
-      folder:"biura/smay_podleze",
-      img:"SMAY.png",
-      count: 21,
-      imagesName: "Smay_logo",
-      imagesFormat: "png",
-      imagesThumbnailName: "small",
-      imagesLargeName: "large"
+  
 
-    },
     
-    {
-      name:"Nowy Styl",
-      description:"Kraków-Prądnik Biały, recepcja",
-      folder:"biura/nowy_styl_krakow_pradnik_bialy_recepcja",
-      img:"glowne.png",
-      count: 17,
-      imagesName: "NSJ_logo",
-      imagesFormat: "png",
-      imagesThumbnailName: "small",
-      imagesLargeName: "large"
-
-    },
-    {
-      name:"Nowy Styl",
-      description:"Kraków - Prądnik Biały otwarta przestrzeń",
-      folder:"biura/nowy_styl_krakow_pradnik_bialy_open_space",
-      img:"glowne.jpg",
-      count: 5,
-      imagesName: "NS2_logo",
-      imagesFormat: "png",
-      imagesThumbnailName: "small",
-      imagesLargeName: "large"
-
-    },
 
 ]
 

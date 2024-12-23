@@ -77,7 +77,108 @@ let catalog = [
     imagesThumbnailName: "small",
     imagesLargeName: "large"
   },
+  {
+    name:"Michał",
+    description:"Warszawa Łazienka Dół",
+    folder:"inwestycjePrywatne/MichalWarszawaLazienkaDol",
+    img:"michallazienka_1.jpg",
+    count: 4,
+    imagesName: "michallazienka",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Michał",
+    description:"Warszawa Łazienka Góra",
+    folder:"inwestycjePrywatne/MichalWarszawaLazienkaGora",
+    img:"michallazienkagora_1.jpg",
+    count: 8,
+    imagesName: "michallazienkagora",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Michał",
+    description:"Warszawa Salon",
+    folder:"inwestycjePrywatne/MichalWarszawaSalon",
+    img:"michalsalon_1.jpg",
+    count: 7,
+    imagesName: "michalsalon",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Michał",
+    description:"Warszawa Szafa1",
+    folder:"inwestycjePrywatne/MichalWarszawaSzafa1",
+    img:"michalszafa1_1.jpg",
+    count: 4,
+    imagesName: "michalszafa1",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Michał",
+    description:"Warszawa Szafa2",
+    folder:"inwestycjePrywatne/MichalWarszawaSzafa2",
+    img:"michalszafa2_1.jpg",
+    count: 8,
+    imagesName: "michalszafa2",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+ 
+  {
+    name:"Michał",
+    description:"Warszawa Wiatrołap",
+    folder:"inwestycjePrywatne/MichalWarszawaWiatrolap",
+    img:"miochalwiatrolap_1.jpg",
+    count: 3,
+    imagesName: "miochalwiatrolap",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Agnieszka",
+    description:"Kraków Kuchnia",
+    folder:"inwestycjePrywatne/AgnieszkaKrakowKuchnia",
+    img:"agnieszkakuchnia_1.jpg",
+    count: 8,
+    imagesName: "agnieszkakuchnia",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Agnieszka",
+    description:"Kraków Łazienka",
+    folder:"inwestycjePrywatne/AgnieszkaKrakowLazienka",
+    img:"agnieszkalazienka_1.jpg",
+    count: 2,
+    imagesName: "agnieszkalazienka",
+    imagesFormat: "jpg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+ 
+
 ]
+
+
 export default new Page({
   title: "InvestycjePrywatne",
   color: "#385723",
