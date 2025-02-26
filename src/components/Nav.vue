@@ -94,10 +94,10 @@
 </g>
 </svg>
         </router-link>
-        <h5 class="white" style="
+        <h5 class="white font-spreded" style="
             position: absolute;
             left: 245px;
-            top: 90px;
+            top: 105px;
             ">
                   FURNITURE DESING & PRODUCTION
                 </h5>
@@ -113,7 +113,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
            <!-- <li class="nav-item">
               <router-link to="/allHome" class="nav-link">allHome</router-link>
@@ -217,5 +217,11 @@ export default {
   height: 16vh;
   margin-left: -30px;
   fill: rgb(255,255 , 255);
+}
+.font-spreded{
+  letter-spacing: 0.3em;
+}
+.menu{
+  margin-top: 80px;
 }
 </style>

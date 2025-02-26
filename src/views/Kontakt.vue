@@ -46,7 +46,7 @@ import { faFacebook, faInstagram, faTwitter, faLinkedin, faYoutube, faPinterest 
             <div class="sociallinks">
               <a href="https://www.facebook.com/shopcenter" target="_blank">
                 <FontAwesomeIcon :icon="faFacebook" />
-              </a><BR />
+              </a>
               <a href="https://www.instagram.com/shopcenter" target="_blank">
                 <FontAwesomeIcon :icon="faInstagram" />
               </a>

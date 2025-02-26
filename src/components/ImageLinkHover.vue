@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="portfolioBoxSmallDiv">
         <router-link :to="`${linkTo}`" class="portfolioLink">
             <div class="portfolioBoxSmallLink">
-                <h1>{{ name }}</h1>
+                <h1 :class="nameClass">{{ name }}</h1>
                 {{ description }}
             </div>
             <div class="portfolioBoxSmall"
@@ -38,6 +38,10 @@ export default {
         description: {
             type: String,
             required: true
+        },
+        nameClass: {
+            type: String,
+            required: false
         },
     },
     data: function () {
@@ -86,8 +90,12 @@ a:active .portfolioBoxSmallLink {
     text-decoration: none;
 }
 
+
 .portfolioLink:hover .portfolioBoxSmall {
     opacity: 1;
 }
 
+.portfolioBoxSmallDiv  .portfolioBoxSmallLink, .portfolioBoxSmallDiv  .portfolioBoxSmall {
+    margin-left: -15px;
+}
 </style>

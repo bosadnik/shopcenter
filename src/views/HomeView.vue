@@ -57,7 +57,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             <div class="row">
               <div class="col-1" style=""></div>
               <div class="col" style="padding-top: 4vh;padding-bottom: 4vh; height: 26vh">
-                <h1 class="white h0" style="text-transform: uppercase;">{{ $t('home.producentMebli') }}<BR />
+                <h1 class="white h0" >{{ $t('home.producentMebli') }}<BR />
                   {{ $t('home.zPasji') }}
                 </h1>
               </div>
@@ -135,20 +135,20 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         <div class="row" style="padding-top: 3vh; height: 38vh; padding-left:3vw; padding-right:3vw">
           <div class="col-1"></div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">1.</span> {{ $t('home.konsultacja') }}</h5>
+            <h5 class="bold"><span class="fontRed">1.</span> {{ $t('home.konsultacja') }}</h5>
             {{ $t('home.konsultacjaText') }}
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">2.</span> {{ $t('home.koncepcja') }}</h5>
+            <h5 class="bold"><span class="fontRed bold">2.</span> {{ $t('home.koncepcja') }}</h5>
             {{ $t('home.koncepcjaText') }}
 
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">3.</span> {{ $t('home.projekt') }}</h5>
+            <h5 class="bold"><span class="fontRed">3.</span> {{ $t('home.projekt') }}</h5>
             {{ $t('home.projektText') }}
           </div>
           <div class="col fontBlack">
-            <h5><span class="fontRed">4.</span> {{ $t('home.realizacja') }}</h5>
+            <h5 class="bold"><span class="fontRed" >4.</span> {{ $t('home.realizacja') }}</h5>
             {{ $t('home.realizacjaText') }}
           </div>
           <div class="col-1"></div>
@@ -169,12 +169,12 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
             borderRight: '15px solid black',
-            paddingBottom: '4vh',
+            paddingBottom: '8vh',
 
 
           }">
-            <h1 class="h0" style="margin-left: -4vw; line-height: 0.6em;">
-              <span style="font-size: 0.4em">{{ $t('home.konstrukcje') }}</span>
+            <h1 class="h0" style="margin-left: -4vw;line-height: 0.6em;">
+              <span style="font-size: 0.4em; letter-spacing: 0.2em;">{{ $t('home.konstrukcje') }}</span>
               <BR />
               {{ $t('home.stalowe') }}
             </h1>
@@ -205,10 +205,10 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         </div>
         <div class="row" style="height: 35vh; background-color: black;">
           <div class="col-1"></div>
-          <div class="col-5" style="padding-top: 2vh">
-            {{ $t('home.konstrukcjeStaloweText') }}
+          <div class="col-5" style="padding-top: 2vh; padding-left: 0px;" v-html="$t('home.konstrukcjeStaloweText')">
+            
           </div>
-          <div class="col-5" style="padding-top: 4vh" v-html="$t('home.szukaszNietypowychRozwiazan')">
+          <div class="col-5" style="padding-top: 2vh" v-html="$t('home.szukaszNietypowychRozwiazan')">
           </div>
 
         </div>
@@ -280,7 +280,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
           <span style='font-size:0.6em'>– {{ $t('home.przestrzennanowo') }}</span>
         </h1>
 
-        <p style="padding-bottom: 2em;">{{ $t('home.przestrzennanowoText') }}
+        <p style="padding-bottom: 2em;" v-html="$t('home.przestrzennanowoText')">
         </p>
         <span v-html="$t('home.przestrzennanowoTextFull')">
         </span>
@@ -291,8 +291,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
           <div class="row" style="">
             <div class="col-1"></div>
-            <div class="col-11">
-              {{ $t('home.wgraportu') }}
+            <div class="col-11" v-html="$t('home.wgraportu')">
+              
             </div>
           </div>
 
@@ -362,7 +362,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
         }">
           <div class="col">
-            <div class="row" style="height: 23vh;">
+            <div class="row" style="height: 28vh;">
               <div class="col-3"></div>
               <div class="col-4">
                 <h1 class="fontWhite h0" style="
@@ -370,7 +370,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                   justify-content: left;
                   align-items: end;
                 
-                  height: 23vh;
+                  height: 28vh;
                 ">{{ $t('home.nowemiejsce') }}</h1>
               </div>
             </div>
@@ -417,7 +417,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                   padding-left: 4vw;
                   padding-right: 20vw;
                   line-height: 1.5em;
-                  height: 54vh;
+                  height: 49.5vh;
               " v-html="$t('home.przeprowadzka')">
               </div>
             </div>
@@ -445,14 +445,14 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-6 fontBlack">
                     <img :src="'bg/zaplanowanieharmonogramu.png'" /><BR />
-                    <h4>{{ $t('home.zaplanowanieHarmonogramu') }}</h4>
+                    <h4 class="bold">{{ $t('home.zaplanowanieHarmonogramu') }}</h4>
                     {{ $t('home.prazzględnieniem') }}
 
 
                   </div>
                   <div class="col-6 fontBlack">
                     <img :src="'bg/inwentaryzacja.png'" /><BR />
-                    <h4>{{ $t('home.inwentaryzacja') }}</h4>
+                    <h4 class="bold">{{ $t('home.inwentaryzacja') }}</h4>
                     {{ $t('home.obecnegoBudynku') }}
 
 
@@ -463,19 +463,19 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-3 fontBlack">
                     <img :src="'bg/przygotowaniizabezpieczenie.png'" /><BR />
-                    <h4>{{ $t('home.przygotowanieizabezpieczenie') }}</h4>
+                    <h4 class="bold">{{ $t('home.przygotowanieizabezpieczenie') }}</h4>
                     {{ $t('home.odsprzetu') }}
 
                   </div>
 
                   <div class="col-3 fontBlack">
                     <img :src="'bg/transport.png'" /><BR />
-                    <h4>{{ $t('home.transport') }} </h4>{{ $t('home.donowejlokalizacji') }}
+                    <h4 class="bold">{{ $t('home.transport') }} </h4>{{ $t('home.donowejlokalizacji') }}
 
                   </div>
                   <div class="col-3 fontBlack">
                     <img :src="'bg/montaziaranzacja.png'" /><BR />
-                    <h4>{{ $t('home.montaziaranzacja') }}</h4>{{ $t('home.nowejprzestrzeni') }}
+                    <h4 class="bold">{{ $t('home.montaziaranzacja') }}</h4>{{ $t('home.nowejprzestrzeni') }}
                   </div>
                   <div class="col-3 fontBlack">
                     <div class="row">
@@ -487,7 +487,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                         </div>
                         <div class="row" style="height: 10vh;">
                           <div class="col-12">
-                            <h4>{{ $t('home.dajemydrugiezycie') }}</h4>
+                            <h4 class="bold">{{ $t('home.dajemydrugiezycie') }}</h4>
                             {{ $t('home.starymmeblom') }}
                           </div>
                         </div>
@@ -520,7 +520,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                   <h1 class="h0 fontWhite" style="margin-left:-8vw; line-height: 0.8em;"
                     v-html="$t('home.dbamyosrodowisko')"></h1>
                 </div>
-                <div class="fontWhite">
+                <div class="fontWhite" style="padding-top: 5vh;">
                   <p>
                     {{ $t('home.dzialamywbranzy') }}
                   </p>
@@ -592,18 +592,18 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         </div>
 
         <div class="row">
-          <div class="col-3" style="">
+          <div class="col-3" style="background-color: black;">
             <div class="row" style="height: 18vh; ">
-              <div class="col">
+              <div class="col" style="background-color: white;">
 
               </div>
             </div>
-            <div class="row align-items-end" style="">
-              <div class="col-12" style="background-color: black; height: 4vh"></div>
+            <div class="row align-items-end">
+              <div class="col-12" style="background-color: black; height: 6vh"></div>
             </div>
           </div>
-          <div class="col-5" style="background-color: #f4b414; padding-top: 2vh; padding-left: 2vw; ">
-            <h1 class="fontWhite" v-html="$t('home.meblezdrugiejreki')">
+          <div class="col-5" style="background-color: #f4b414; padding-top: 4vh; padding-left: 2vw; padding-bottom: 4vh;">
+            <h1 class="fontWhite" style="font-size:3.5rem;" v-html="$t('home.meblezdrugiejreki')">
             </h1>
           </div>
 
@@ -632,6 +632,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             style="background-color: black; padding-left: 5vw; padding-right: 5vw; padding-top: 3vh; padding-bottom: 3vh;" v-html="$t('home.szukaszmeblidoswojegobiura')">
 
           </div>
+          
         </div>
 
 
@@ -706,15 +707,13 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
     </div>
 
     <!-- SCREEN 12 -->
+    <div class="row" style="height: 7vh; background-color: black;">
+        <div class="col text-center" style="padding-top: 1vh;">
+                <h2 style="letter-spacing: 0.3rem;" v-html="$t('home.naszewybranerelizacje')"></h2>
+        </div>
+    </div>
     <div class="row" style="background-color: black;">
       <div class="col">
-
-        <div class="row" style="height: 10px;">
-          <!-- <div class="col text-center" style="padding-top: 5vh;">
-                <h2>NASZE REALIZACJE:</h2>
-              </div> -->
-        </div>
-
         <div class="containercontainer-fluid">
 
           <div class="row" style="">
@@ -857,5 +856,14 @@ export default {
 
 .logos .row {
   padding-top: 5vh
+}
+
+.bold {
+  font-weight: bold;
+}
+</style>
+<style >
+.bold {
+  font-weight: bold;
 }
 </style>

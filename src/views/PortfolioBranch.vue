@@ -22,7 +22,7 @@
                                 :imgUrl="`${item.folder}/${item.img}`"
                                 :name="item.name"
                                 :description="item.description"
-                                class="col-4"
+                                class="col-4 "
                             />
                             <!-- <div v-for="item in catalog" :key="item.key" class="col-4 portfolioBoxSmall"
                                 :style="{ backgroundImage: `url(${require(`../assets/portfolio/${item.folder}/${item.img}`)})` }">

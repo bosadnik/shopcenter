@@ -30,8 +30,8 @@ export default {
           "realizacjaText": "After signing the contract, our carpenters get to work! After assembly, you can enjoy an interior tailored to your needs.",
           "konstrukcje": "STRUCTURES",
           "stalowe": "STEEL",
-          "konstrukcjeStaloweText": "Steel is a structural material offering immense creative freedom. Thanks to our expertise, experience, and the dedication of highly skilled artisans, the furniture structures we create combine fascinating design with daily-use stability and durability. Our furniture is not only found in homes but also serves as equipment for prestigious restaurants, companies, and organizations.",
-          "szukaszNietypowychRozwiazan": `Looking for unconventional solutions? Contact us!
+          "konstrukcjeStaloweText": `Steel is a structural material offering immense creative freedom. Thanks to our expertise, experience, and the dedication of highly skilled artisans, the furniture structures we create combine fascinating design with daily-use stability and durability.<br> Our furniture is not only found in <b class="bold">homes</b> but also serves as equipment for prestigious <b class="bold">restaurants</b>, <b class="bold">companies</b>, and <b class="bold">organizations</b>.`,
+          "szukaszNietypowychRozwiazan": `<b class="bold">Looking for</b> unconventional solutions? Contact us!
           <ul>
             <li>railings, pergolas</li>
             <li>latticed walls</li>
@@ -81,24 +81,29 @@ export default {
           "starymmeblom": "to old furniture",
           "dbamyosrodowisko": `<span style="font-size:0.6em">WE CARE</span><br />ABOUT THE ENVIRONMENT`,
           "dzialamywbranzy": `Operating in the design and execution industry, we recognize our responsibility in reshaping spaces with a sustainable future in mind. Thus, we assist our clients in waste management.`,
-          "oferujemytakze": `<p>We also offer a <span class="fontGreen">removal service</span> for used furniture for <span class="fontGreen">disposal</span> <img :src="'bg/basket.png'" /> – allowing you to quickly prepare the room for a new arrangement. Our team handles:
+          "oferujemytakze": `<p>We also offer a <span class="fontGreen">removal service</span> for used furniture for <span class="fontGreen">disposal</span> <img :src="'bg/basket.png'" /> – allowing you to quickly prepare the room for a new arrangement.
+          <BR>Our team handles:
           </p>
           <ul>
-            <li>dismantling</li>
-            <li>packing – we provide a waste container</li>
-            <li>removal</li>
+            <li class="bold">dismantling</li>
+            <li><b class="bold">packing </b>– we provide a waste container</li>
+            <li class="bold">removal</li>
           </ul>
           <p>of old furniture, creating space for new ones.</p>
           <p>What happens to the items we collect? They are sorted and then prepared for disposal. Recycling enables the recovery of raw materials, which are reused across various industries.</p>`,
           "policzymyTwojSlad": "We will calculate your carbon footprint",
           "meblezdrugiejreki": `Second-hand furniture - Your benefits`,
           "szukaszmeblidoswojegobiura": `<p>Looking for furniture for your office that not only meets your needs but also contributes to protecting our planet?</p>
-          <p>In the spirit of sustainability, we offer a wide selection of premium-quality used office furniture from renowned manufacturers, ensuring maximum comfort at work. Designed with modern trends in mind, these pieces perfectly complement various arrangements.</p>
-          <p>Visit our store <a href="https://rebench.io" class="scbtnlink">rebench.io</a>, where you'll find modern office space furnishing systems at attractive prices.</p>
+          <p>In the spirit of sustainability, we offer a wide selection of <b class="bold">premium-quality</b> used office furniture from renowned manufacturers, ensuring maximum comfort at work. Designed with modern trends in mind, these pieces perfectly complement various arrangements.</p>
+          <p>Visit our store <a href="https://rebench.io" class="scbtnlink bold">rebench.io</a>, where you'll find modern office space furnishing systems at attractive prices.</p>
           <div class="text-center">
-            <button class="scbtn" onclick="window.location.href='https://rebench.io'">WELCOME</button>
+            <button class="scbtn bold" onclick="window.location.href='https://rebench.io'">WELCOME</button>
+            <span style="margin-left: -50px;"><svg fill="#f4b414" height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 173.312 173.312" xml:space="preserve">
+<polygon points="137.078,102.745 36.234,0 36.238,143.965 65.559,118.501 87.965,173.312 120.72,159.922 98.315,105.112 "/>
           </div>`,
-          "zaufalinam": "TRUSTED US:"
+          "zaufalinam": "TRUSTED US:",
+          "naszewybranerelizacje": `OUR SELECTED PROJECTS:`,
         },
         
           "onas": {
@@ -186,8 +191,8 @@ export default {
         konstrukcje: "KONSTRUKCJE",
         stalowe: "STALOWE",
         konstrukcjeStaloweText:
-          "Stal jest materiałem konstrukcyjnym dającym niezmiernie dużą dowolność w procesie tworzenia. To głównie z tego powodu oraz dzięki wiedzy, doświadczeniu, a także zaangażowaniu wysoce wykwalifikowanych rzemieślników, konstrukcje mebli, które tworzymy łączą w sobie niesamowicie interesujący design z ważną w codziennym użytkowaniu stabilnością i wytrzymałością. Nasze meble trafiają nie tylko do domów i mieszkań, ale przede wszystkim służą jako wyposażenie renomowanych restauracji, firm i organizacji.",
-        szukaszNietypowychRozwiazan: `Szukasz nietypowych rozwiązań? Skontaktuj się z nami!
+          `Stal jest materiałem konstrukcyjnym dającym niezmiernie dużą dowolność w procesie tworzenia. To&nbsp;głównie z tego powodu oraz dzięki wiedzy, doświadczeniu, a także zaangażowaniu wysoce wykwalifikowanych rzemieślników, konstrukcje mebli, które tworzymy łączą w sobie niesamowicie interesujący design z ważną w codziennym użytkowaniu stabilnością i wytrzymałością.<br> Nasze meble trafiają nie tylko do <b class="bold">domów</b> i <b class="bold">mieszkań</b>, ale przede wszystkim służą jako wyposażenie renomowanych <b class="bold">restauracji</b>, <b>firm</b> i <b class="bold">organizacji</b>.`,
+        szukaszNietypowychRozwiazan: `<b class="bold">Szukasz</b> nietypowych rozwiązań? Skontaktuj się z nami!
               <ul>
                 <li>balustrady, pergole</li>
                 <li>ścianki ażurowe </li>
@@ -203,14 +208,15 @@ export default {
         przestrzennanowoText: `Coraz więcej inwestorów decyduje się na realizację fit out firmy, przestrzeni
                 biurowych i handlowych,
                 restauracji i miejsc użyteczności publicznej. Oszczędzają w ten sposób czas i ograniczają formalności,
-                korzystając z usług jednej profesjonalnej firmy, która w sposób kompleksowy zajmuje się przygotowaniem
+                korzystając z usług jednej <b class="bold">profesjonalnej firmy</b>, która w sposób kompleksowy zajmuje się przygotowaniem
                 powierzchni według oczekiwań i życzeń Klienta.`,
         przestrzennanowoTextFull: `
-                  <B style="font-size: 1.2em;">FIT OUT</B> to kompleksowa usługa, która obejmuje swoim zakresem <B
-                    style="font-size: 1.2em;">wszystkie etapy</B>, które dla Państwa zrealizujemy:
+                  <B style="font-size: 1.2em;" class="bold">FIT OUT</B> to kompleksowa usługa, która obejmuje swoim zakresem <B
+                    style="font-size: 1.2em;" class="bold">wszystkie etapy</B>, które dla Państwa <b class="bold">zrealizujemy</b>:
                 </p>
                 <ul style="padding-bottom: 2em;">
                   <li>identyfikacje potrzeb Klienta</li>
+                  <li>koordynacja działań niezależnych wykonawców</li>
                   <li>przygotowanie wstępnej koncepcji dopasowanej pod indywidualne potrzeby inwestora</li>
                   <li>opracowanie projektu koncepcyjnego (z ew. uwzględnieniem norm Państwowej Inspekcji Sanitarnej)</li>
                   <li> przygotowanie wizualizacji projektu</li>
@@ -223,17 +229,16 @@ export default {
                   Co oznacza, że inwestor nie musi już nadzorować prac kilku wykonawców np. z branży sanitarnej, elektrycznej,
                   czy
                   budowlanej.
-                  Prace na każdym etapie prowadzone są w oparciu o ustalony wcześniej budżet.
+                  Prace na każdym etapie prowadzone są w oparciu&mbsp;o ustalony wcześniej budżet.
                 </p>
                 <p style="padding-bottom: 2em;">
-                  Powierzając to zadanie specjalistom naszej firmy SHOPCENTER, zyskują Państwo pewność, że zgodnie z założeniami
-                  i
-                  budżetem przechodząc przez wszystkie etapy robót, doprowadzimy do oddania gotowych do użytku i wyposażonych
+                  Powierzając to zadanie specjalistom naszej firmy <b class="bold">SHOPCENTER</b>, zyskują Państwo pewność, że zgodnie z założeniami&mbsp;i
+                  budżetem przechodząc przez wszystkie etapy robót, doprowadzimy do oddania gotowych do użytku&mbsp;i wyposażonych
                   powierzchni ku Państwa zadowoleniu.
                 </p>
               `,
-        wgraportu: `              Według raportu Światowej Organizacji Zdrowia
-              dla 47% pracowników otoczenie pracy ma wpływ na wykonywane obowiązki.
+        wgraportu: `              Według raportu <b class="bold">Światowej Organizacji Zdrowia</b>
+              dla <b class="bold">47%</b> pracowników otoczenie pracy ma wpływ na wykonywane obowiązki.
               `,
         odwizualizacji: `OD WIZUALIZACJI`,
         dorealizacji: `DO REAZLIZACJI...`,
@@ -246,7 +251,7 @@ export default {
               <p>Wiele może być powodów, dla których podejmowana jest decyzja dotycząca zmiany siedziby firmy.
                 Zazwyczaj jednak wiąże się to z rozwojem, potrzebą pozyskania nowych Klientów lub wejściem na nowy
                 rynek.</p>
-              <p>Niezależnie od przyczyny, realizujemy każde tego typu zlecenie profesjonalnie i starannie.</p>
+              <p>Niezależnie od przyczyny, <b class="bold">realizujemy</b> każde tego typu zlecenie <b class="bold">profesjonalnie&nbsp;i starannie</b>.</p>
               `,
         zmianaLokalizacji: "ZMIANA LOKALIZACJI – krok po kroku",
         zaplanowanieHarmonogramu: "1. ZAPLANOWANIE HARMONOGRAMU",
@@ -272,13 +277,13 @@ export default {
                       Oferujemy także <span class="fontGreen">usługę wywozu</span> zużytych mebli do <span
                         class="fontGreen">utylizacji</span> <img :src="'bg/basket.png'" /> - pozwala
                       to w szybkim czasie
-                      przygotować pomieszczenie pod nową aranżacje.
+                      przygotować pomieszczenie pod nową aranżacje.<BR>
                       Nasz zespół zajmie się:
                     </p>
                     <ul>
-                      <li>demontażem</li>
-                      <li>pakowaniem – podstawiamy kontener na odpady</li>
-                      <li>wywozem</li>
+                      <li class="bold">demontażem</li>
+                      <li ><b class="bold">pakowaniem </b> – podstawiamy kontener na odpady</li>
+                      <li class="bold">wywozem</li>
                     </ul>
                     <p>
                       starych mebli, abyś miał miejsce na nowe.
@@ -302,20 +307,26 @@ export default {
 
             <p>
               W duchu zrównoważonego rozwoju oferujemy Państwu szeroki wybór używanych mebli biurowych jakości
-              PREMIUM – uznanych i najlepszych producentów, które umożliwiają zachowanie maksymalnego komfortu
+              <b class="bold">PREMIUM</b> – uznanych i najlepszych producentów, które umożliwiają zachowanie maksymalnego komfortu
               podczas pracy.
               Stworzone zgodnie z najnowszymi trendami z myślą o nowoczesnej, biurowej elegancji idealnie dopasują
               się do rozmaitych aranżacji.
             </p>
 
-            <p>Zapraszamy do sklepu <a href="https://rebench.io" class="scbtnlink">rebench.io</a>, gdzie znajdą Państwo
+            <p>Zapraszamy do sklepu <a href="https://rebench.io" class="scbtnlink bold">rebench.io</a>, gdzie znajdą Państwo
               nowoczesne systemy wyposażenia przestrzeni
               biurowych w atrakcyjnej cenie. </p>
 
             <div class="text-center">
-              <button class="scbtn" onclick="window.location.href='https://rebench.io'">ZAPRASZAMY</button>
+              <button class="scbtn bold" onclick="window.location.href='https://rebench.io'">ZAPRASZAMY</button>
+                        <span style="margin-left: -50px;"><svg fill="#f4b414" height="30px" width="30px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 173.312 173.312" xml:space="preserve">
+<polygon points="137.078,102.745 36.234,0 36.238,143.965 65.559,118.501 87.965,173.312 120.72,159.922 98.315,105.112 "/>
+</svg></span>
+
             </div>`,
          zaufalinam: `ZAUFALI NAM:`,
+         naszewybranerelizacje: `NASZE WYBRANE REALIZACJE:`,
       },
       onas: {
         poznajmysie: "Poznajmy się",

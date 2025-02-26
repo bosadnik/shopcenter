@@ -1,3 +1,8 @@
+<script setup>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faFacebook, faInstagram, faTwitter, faLinkedin, faYoutube, faPinterest } from '@fortawesome/free-brands-svg-icons'
+</script>
+
 <template>
   <footer>
     <div class="container-fluid">
@@ -11,13 +16,32 @@
         </div>
         <div class="col">
           <img src="@/assets/envelope.jpg"  /> biuro@shopcenter.pl
+          <div class="sociallinks">
+              <a href="https://www.facebook.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faFacebook" />
+              </a>
+              <a href="https://www.instagram.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faInstagram" />
+              </a>
+              <a href="https://www.twitter.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faTwitter" />
+              </a>
+              <a href="https://www.linkedin.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faLinkedin" />
+              </a>
+              <a href="https://www.youtube.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faYoutube" />
+              </a>
+              <a href="https://www.pinterest.com/shopcenter" target="_blank">
+                <FontAwesomeIcon :icon="faPinterest" />
+              </a><BR />
+            </div>
+
+
         </div>
         <div class="col text-right align-top">
-          <a href="#">
-            <div class="nav-link">
-              <!-- <font-awesome-icon :icon="['fas', 'angle-up']" /> -->
-            </div>
-          </a>
+          
+          
         </div>
       </div>
     </div>
@@ -25,9 +49,11 @@
 </template>
 
 <script>
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
 export default {
   name: "Footer",
-
+  components: { FontAwesomeIcon },
   // props: {
   //   msg: String
   // }
@@ -60,4 +86,15 @@ footer a {
   color: rgb(177, 177, 177);
   line-height: 1;
 }
+
+.sociallinks a {
+  color: white;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.sociallinks:link {
+  color: white;
+}
+
 </style>
