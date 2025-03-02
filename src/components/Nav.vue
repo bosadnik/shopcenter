@@ -94,12 +94,12 @@
 </g>
 </svg>
         </router-link>
-        <h5 class="white font-spreded" style="
+        <h5 class="white font-spreded fdandp" style="
             position: absolute;
             left: 245px;
             top: 105px;
             ">
-                  FURNITURE DESING & PRODUCTION
+                  FURNITURE DESIGN & PRODUCTION
                 </h5>
         <button
           class="navbar-toggler"
@@ -119,9 +119,9 @@
               <router-link to="/allHome" class="nav-link">allHome</router-link>
             </li> -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <router-link to="/onas" class="nav-link">{{$t('nav.about')}}</router-link>
-            </li>
+            </li> -->
             <li class="nav-item">
               <router-link to="/portfolio" class="nav-link">{{$t('nav.portfolio')}}</router-link>
             </li>
@@ -214,12 +214,15 @@ export default {
 .sc_logo_top {
   margin-top: -15px;
   margin-bottom: -15px;
-  height: 16vh;
+  height: 170px;
   margin-left: -30px;
   fill: rgb(255,255 , 255);
 }
 .font-spreded{
   letter-spacing: 0.3em;
+}
+.fdandp{
+  font-size: 1.2em;
 }
 .menu{
   margin-top: 80px;

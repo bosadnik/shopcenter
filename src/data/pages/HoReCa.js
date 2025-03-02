@@ -23,7 +23,7 @@ let catalog = [
     imagesLargeName: "large"
   },
   {
-    name:"Dwa Smaki restaurant",
+    name:"Dwa Smaki",
     description:"Słomniki",
     folder:"horeca/dwa_smaki_restaurant_slomniki",
     img:"glowne_Dss_logo_medium_4.png",
@@ -34,6 +34,30 @@ let catalog = [
     imagesLargeName: "large"
   },
 
+  {
+    name:"Dwa Smaki",
+    description:"Zofipole",
+    folder:"horeca/dwa_smaki_zofipole",
+    img:"glowne.png",
+    count: 10,
+    imagesName: "DwaSmaki",
+    imagesFormat: "png",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
+  {
+    name:"Pizzeria Fresca",
+    description:"Budzanów",
+    folder:"horeca/pizzeria_fresca_budzanow",
+    img:"glowne.jpg",
+    count: 10,
+    imagesName: "PizzeriaFresca",
+    imagesFormat: "jpeg",
+    imagesThumbnailName: "small",
+    imagesLargeName: "large",
+    noSizeInName: true
+  },
   
 ]
 export default new Page({

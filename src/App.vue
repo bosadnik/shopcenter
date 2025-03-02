@@ -76,9 +76,7 @@ export default {
   font-style: normal;
   font-size: 18px;
   line-height: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
+  
   color: white;
 }
 

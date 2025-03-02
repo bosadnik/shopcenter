@@ -59,7 +59,7 @@ let catalog = [
     name:"Euro Sklep",
     description:"Sami Swoi, Słomniki",
     folder:"handelSklepy/EuroSklepSamiSwoiSlomniki",
-    img:"SL_ico.jpg",
+    img:"glowne.png",
     count: 11,
     imagesName: "SL_logo",
     imagesFormat: "png",
@@ -101,7 +101,7 @@ let catalog = [
   },
   {
     name:"Kuźnia Smaków",
-    description:"Kraków os. Złocień (Sklep Firmowy Biernat)",
+    description:"Kraków os. Złocień",
     folder:"handelSklepy/KuzniaSmakowKrakowosZlocienSklepFirmowyBiernat",
     img:"glowne_Biernat_medium_logo_1.png",
     count: 7,

@@ -133,8 +133,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
           </div>
         </div>
         <div class="row" style="padding-top: 3vh; height: 38vh; padding-left:3vw; padding-right:3vw">
-          <div class="col-1"></div>
-          <div class="col fontBlack">
+          <div class="col-1 fontBlack d-lg-block d-none"></div>
+          <div class="col fontBlack ">
             <h5 class="bold"><span class="fontRed">1.</span> {{ $t('home.konsultacja') }}</h5>
             {{ $t('home.konsultacjaText') }}
           </div>
@@ -445,14 +445,14 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-6 fontBlack">
                     <img :src="'bg/zaplanowanieharmonogramu.png'" /><BR />
-                    <h4 class="bold">{{ $t('home.zaplanowanieHarmonogramu') }}</h4>
+                    <h4 class="bold h4responsive">{{ $t('home.zaplanowanieHarmonogramu') }}</h4>
                     {{ $t('home.prazzględnieniem') }}
 
 
                   </div>
                   <div class="col-6 fontBlack">
                     <img :src="'bg/inwentaryzacja.png'" /><BR />
-                    <h4 class="bold">{{ $t('home.inwentaryzacja') }}</h4>
+                    <h4 class="bold h4responsive">{{ $t('home.inwentaryzacja') }}</h4>
                     {{ $t('home.obecnegoBudynku') }}
 
 
@@ -463,19 +463,19 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-3 fontBlack">
                     <img :src="'bg/przygotowaniizabezpieczenie.png'" /><BR />
-                    <h4 class="bold">{{ $t('home.przygotowanieizabezpieczenie') }}</h4>
+                    <h4 class="bold h4responsive">{{ $t('home.przygotowanieizabezpieczenie') }}</h4>
                     {{ $t('home.odsprzetu') }}
 
                   </div>
 
                   <div class="col-3 fontBlack">
                     <img :src="'bg/transport.png'" /><BR />
-                    <h4 class="bold">{{ $t('home.transport') }} </h4>{{ $t('home.donowejlokalizacji') }}
+                    <h4 class="bold h4responsive">{{ $t('home.transport') }} </h4>{{ $t('home.donowejlokalizacji') }}
 
                   </div>
                   <div class="col-3 fontBlack">
                     <img :src="'bg/montaziaranzacja.png'" /><BR />
-                    <h4 class="bold">{{ $t('home.montaziaranzacja') }}</h4>{{ $t('home.nowejprzestrzeni') }}
+                    <h4 class="bold h4responsive">{{ $t('home.montaziaranzacja') }}</h4>{{ $t('home.nowejprzestrzeni') }}
                   </div>
                   <div class="col-3 fontBlack">
                     <div class="row">
@@ -487,7 +487,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                         </div>
                         <div class="row" style="height: 10vh;">
                           <div class="col-12">
-                            <h4 class="bold">{{ $t('home.dajemydrugiezycie') }}</h4>
+                            <h4 class="bold h4responsive">{{ $t('home.dajemydrugiezycie') }}</h4>
                             {{ $t('home.starymmeblom') }}
                           </div>
                         </div>
@@ -568,7 +568,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
     <!-- SCREEN 10 -->
     <div class="row" :style="{
-      backgroundImage: `url(bg/meblezdrugiejreki.jpg')`,
+      backgroundImage: `url(/bg/meblezdrugiejreki.jpg)`,
+
       backgroundPosition: 'left bottom',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -815,8 +816,7 @@ export default {
 }
 
 .h0 {
-  font-size: 4.5vw;
-
+  font-size: 6vmin;
 }
 
 .white {
@@ -866,4 +866,8 @@ export default {
 .bold {
   font-weight: bold;
 }
+
+.h4responsive {
+  font-size: 2vmin;
+} 
 </style>

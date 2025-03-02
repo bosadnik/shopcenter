@@ -16,7 +16,7 @@ let catalog = [
   },
   {
     name:"Nowoczesne biuro",
-    description:"Kraków-Śródmieście (Autodesk)",
+    description:"Kraków-Śródmieście",
     folder:"biura/Autodesk",
     img:"ad.jpg",
     count: 51,
@@ -42,7 +42,7 @@ let catalog = [
     name:"SMAY",
     description:"Podłęże",
     folder:"biura/smay_podleze",
-    img:"SMAY.png",
+    img:"smay_glowne.png",
     count: 21,
     imagesName: "Smay_logo",
     imagesFormat: "png",
@@ -79,7 +79,7 @@ let catalog = [
 
   {
     name:"Lider branży ubezpieczeniowej",
-    description:"Wrocłas (TUE)",
+    description:"Wrocłas",
     folder:"biura/tue",
     img:"TUE_logo_medium_5.png",
     count: 9,
@@ -120,7 +120,7 @@ let catalog = [
   
     {
       name:"Przestrzeń Biurowa, kuchnia",
-      description:"Katowice (KKK)",
+      description:"Katowice",
       folder:"biura/kkk",
       img:"kkk.jpg",
       count: 20,
@@ -133,7 +133,7 @@ let catalog = [
   
     {
       name:"Przestrzeń Biurowa, kuchnia",
-      description:"Kraków (KKK)",
+      description:"Kraków",
       folder:"biura/kkkkrak",
       img:"KKK_logo_medium_1.png",
       count: 4,
@@ -143,6 +143,18 @@ let catalog = [
       imagesLargeName: "large",
     },
   
+    {
+      name:"Przestrzeń Biurowa",
+      description:"Warszawa Ochota",
+      folder:"biura/warszawa_ochota",
+      img:"warszawa_ochota_glowne.jpg",
+      count: 29,
+      imagesName: "WAWOCHOTA",
+      imagesFormat: "jpeg",
+      imagesThumbnailName: "small",
+      imagesLargeName: "large",
+    }
+    
 
     
 

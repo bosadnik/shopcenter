@@ -152,7 +152,36 @@ export default {
             "wykonczonychprzestrzeni": "COMPLETED PUBLIC SPACES",
             "dostarczonychmebli": "DELIVERED FURNITURE TO HOMES AND APARTMENTS",
             "wypityczhfilizanek": "CUPS OF COFFEE SHARED WITH OUR CLIENTS"
+          },
+          kontakt:{
+            dzialhandlowy:`SALES DEPARTMENT`,
+            telefon:`phone:`,
+            dzialzakupow:`PURCHASING DEPARTMENT`,
+            dzialprojektu:`PROJECT DEPARTMENT`,
+            dzialfinansowy:`FINANCIAL DEPARTMENT`,
+            produkcjaimontaz:`PRODUCTION AND ASSEMBLY`,
+            skontaktujsieznami:`CONTACT US`,
+            montaz:'assembly',
+            produkcja:'production',
+            imieinazwisko:'Full Name',
+            formtelefon:'Phone',
+            email:'Email',
+            akceptujewarunki:'I consent to the processing of my personal data by SHOPCENTER A. Kusina, P. Iwanek s.c. for marketing purposes',
+            wyslij:'Send',
+            godzinypracy:'Working Hours',
+            ponnpt: 'Mon - Fri',
+            sbnie: 'Sat-Sun: closed',
+            znajdznas:'Find us also on',
+            nameRequired: 'Name is required',
+            phoneRequired: 'Phone is required',
+            emailRequired: 'Email is required',
+            invalidEmail: 'Invalid email format',
+            messageRequired: 'Message is required',
+            termsRequired: 'You must accept the terms',
+            messageSent: 'Message sent successfully!',
+            sendError: 'Failed to send message. Please try again.'
           }
+    
         
         
       },
@@ -172,7 +201,8 @@ export default {
         producentMebli: "Producent mebli",
         zPasji: "z pasji...",
         mebleOdAdoZ: `Meble od A<span style="font-size: 0.5em">ranżacji</span> do <span
-                    style="font-size: 0.5em">monta</span>Ż !`,
+                    style="font-size: 0.5em">monta</span>Ż<span
+                    style="font-size: 0.5em">u</span> !`,
         bezwgledu:
           "Bez względu na to, czy aranżujesz niewielką przestrzeń zacisza domowego czy kompleksowy obiekt biznesowy, nasze meble z pewnością będą jej idealnym dopełnieniem.",
         zobacz: "Zobacz, jak w kilku krokach zrealizujemy Twoją wizję.",
@@ -212,7 +242,7 @@ export default {
                 powierzchni według oczekiwań i życzeń Klienta.`,
         przestrzennanowoTextFull: `
                   <B style="font-size: 1.2em;" class="bold">FIT OUT</B> to kompleksowa usługa, która obejmuje swoim zakresem <B
-                    style="font-size: 1.2em;" class="bold">wszystkie etapy</B>, które dla Państwa <b class="bold">zrealizujemy</b>:
+                     class="bold">wszystkie etapy</B>, które dla Państwa <b class="bold">zrealizujemy</b>:
                 </p>
                 <ul style="padding-bottom: 2em;">
                   <li>identyfikacje potrzeb Klienta</li>
@@ -275,7 +305,7 @@ export default {
                     `,
         oferujemytakze: `                    <p>
                       Oferujemy także <span class="fontGreen">usługę wywozu</span> zużytych mebli do <span
-                        class="fontGreen">utylizacji</span> <img :src="'bg/basket.png'" /> - pozwala
+                        class="fontGreen">utylizacji</span> <img src="bg/basket.png" /> - pozwala
                       to w szybkim czasie
                       przygotować pomieszczenie pod nową aranżacje.<BR>
                       Nasz zespół zajmie się:
@@ -409,6 +439,10 @@ export default {
         email:'Email',
         akceptujewarunki:'Wyrażam zgodę na przetwarzanie moich danych osobowych przez SHOPCENTER A. Kusina, P. Iwanek s.c. w celach marketingowych',
         wyslij:'Wyślij',
+        godzinypracy:'Godziny pracy',
+        ponnpt: 'Pon.-  pt',
+        sbnie: 'Sb.-Nd. nieczynne',
+        znajdznas:'Znajdź nas równie na',
       }
 
     },
