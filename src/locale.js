@@ -18,10 +18,9 @@ export default {
           "producentMebli": "Furniture manufacturer",
           "zPasji": "out of passion...",
           "mebleOdAdoZ": `Furniture from A<span style="font-size: 0.5em">rrangement</span> to <span style="font-size: 0.5em">Assemb</span>LY!`,
-          "bezwgledu": "Whether you're arranging a small home retreat or a comprehensive business facility, our furniture will undoubtedly be its perfect complement.",
-          "zobacz": "See how we can realize your vision in a few steps.",
+          "bezwgledu": "Regardless of whether you are arranging a small space at home or a complex business facility, our furniture will certainly be the perfect complement.",
+          "zobacz": "See how we can accomplish your vision in just a few steps.",
           "konsultacja": "CONSULTATION",
-          "konsultacjaText": "We will ask you for pictures of your inspirations. We will discuss your needs and expectations. Our designer will help you choose every element in terms of functionality and aesthetics.",
           "koncepcja": "CONCEPT",
           "koncepcjaText": "Based on the collected information, we will prepare a design and visualization. We will choose the most convenient proposal and preliminary pricing. This is the perfect time for any adjustments.",
           "projekt": "PROJECT",
@@ -34,7 +33,7 @@ export default {
           "szukaszNietypowychRozwiazan": `<b class="bold">Looking for</b> unconventional solutions? Contact us!
           <ul>
             <li>railings, pergolas</li>
-            <li>latticed walls</li>
+            <li>Openwork walls</li>
             <li>shelves, cabinets, consoles</li>
             <li>seating, bar stools</li>
             <li>frames for desks, tables, and coffee tables</li>
@@ -45,7 +44,7 @@ export default {
           "fitout": "FIT OUT",
           "przestrzennanowo": "SPACE REDEFINED",
           "przestrzennanowoText": `More and more investors opt for fit-out services for offices, commercial spaces, restaurants, and public-use areas. This saves time and reduces formalities by using one professional company that comprehensively prepares the space according to the client's expectations and wishes.`,
-          "przestrzennanowoTextFull": `<b style="font-size: 1.2em;">FIT OUT</b> is a comprehensive service encompassing all <b style="font-size: 1.2em;">phases</b>, which we will carry out for you:
+          "przestrzennanowoTextFull": `<b style="font-size: 1.2em;">FIT OUT</b> is a comprehensive service encompassing all <b style="font-size: 1.2em;">stages</b>, we will carry out for you.:
           <ul style="padding-bottom: 2em;">
             <li>identifying client needs</li>
             <li>preparing a preliminary concept tailored to individual investor needs</li>
@@ -57,7 +56,7 @@ export default {
             <li>managing waste sustainably</li>
           </ul>
           What this means is that the investor no longer needs to oversee work from multiple contractors, such as sanitary, electrical, or construction sectors. All stages are carried out according to a previously agreed budget.`,
-          "wgraportu": `According to the World Health Organization report, for 47% of employees, the work environment impacts their responsibilities.`,
+          "wgraportu": `According to a report by the  World Health Organization, 47% of employees admits that work environment impacts on their work duties.`,
           "odwizualizacji": "FROM VISUALIZATION",
           "dorealizacji": "TO IMPLEMENTATION...",
           "nowemiejsce": "New place,",
@@ -67,17 +66,17 @@ export default {
           <p>There can be many reasons for deciding to change a company's headquarters. Usually, it is related to growth, the need to attract new clients, or entering a new market.</p>
           <p>No matter the reason, we handle such projects professionally and thoroughly.</p>`,
           "zmianaLokalizacji": "RELOCATION – step by step",
-          "zaplanowanieHarmonogramu": "1. SCHEDULE PLANNING",
+          "zaplanowanieHarmonogramu": "1.&nbsp;SCHEDULE PLANNING",
           "prazzględnieniem": "work considering required permissions and approvals",
-          "inwentaryzacja": "2. INVENTORY",
+          "inwentaryzacja": "2.&nbsp;INVENTORY",
           "obecnegoBudynku": "of the current building – potential disposal of used equipment",
-          "przygotowanieizabezpieczenie": "3. PREPARATION AND SECURING",
+          "przygotowanieizabezpieczenie": "3.&nbsp;PREPARATION AND SECURING",
           "odsprzetu": "- from equipment to documents and furniture.",
-          "transport": "4. TRANSPORT",
+          "transport": "4.&nbsp;TRANSPORT",
           "donowejlokalizacji": "to the new location",
-          "montaziaranzacja": "5. INSTALLATION AND ARRANGEMENT",
+          "montaziaranzacja": "5.&nbsp;INSTALLATION AND ARRANGEMENT",
           "nowejprzestrzeni": "of the new space",
-          "dajemydrugiezycie": "6. GIVING A SECOND LIFE",
+          "dajemydrugiezycie": "6.&nbsp;GIVING A SECOND LIFE",
           "starymmeblom": "to old furniture",
           "dbamyosrodowisko": `<span style="font-size:0.6em">WE CARE</span><br />ABOUT THE ENVIRONMENT`,
           "dzialamywbranzy": `Operating in the design and execution industry, we recognize our responsibility in reshaping spaces with a sustainable future in mind. Thus, we assist our clients in waste management.`,
@@ -179,7 +178,12 @@ export default {
             messageRequired: 'Message is required',
             termsRequired: 'You must accept the terms',
             messageSent: 'Message sent successfully!',
-            sendError: 'Failed to send message. Please try again.'
+            sendError: 'Failed to send message. Please try again.',
+            fileRequired: 'File is required',
+            fileInvalid: 'Invalid file format. Please upload a PDF, DOC, or DOCX file.',
+            wiadomosc:'Message',
+            akceptujwarunki:'I accept the terms',
+            plik:'File',
           }
     
         
@@ -284,18 +288,18 @@ export default {
               <p>Niezależnie od przyczyny, <b class="bold">realizujemy</b> każde tego typu zlecenie <b class="bold">profesjonalnie&nbsp;i starannie</b>.</p>
               `,
         zmianaLokalizacji: "ZMIANA LOKALIZACJI – krok po kroku",
-        zaplanowanieHarmonogramu: "1. ZAPLANOWANIE HARMONOGRAMU",
+        zaplanowanieHarmonogramu: "1.&nbsp;ZAPLANOWANIE HARMONOGRAMU",
         prazzględnieniem: "prac z uwzględnieniem wymaganych zgód i pozwoleń",
-        inwentaryzacja: "2. INWENTARYZACJA ",
+        inwentaryzacja: "2.&nbsp;INWENTARYZACJA ",
         obecnegoBudynku:
           "obecnego budynku – ewentualna utylizacja zużytego sprzętu",
-        przygotowanieizabezpieczenie: "3. PRZYGOTOWANIE I ZABEZPIECZENIE",
+        przygotowanieizabezpieczenie: "3.&nbsp;PRZYGOTOWANIE I ZABEZPIECZENIE",
         odsprzetu: "- od sprzętu, przez dokumenty, aż po meble.",
-        transport: "4. TRANSPORT",
+        transport: "4.&nbsp;TRANSPORT",
         donowejlokalizacji: "do nowej lokalizacji",
-        montaziaranzacja: "5. MONTAŻ I ARANŻACJA",
+        montaziaranzacja: "5.&nbsp;MONTAŻ I ARANŻACJA",
         nowejprzestrzeni: "nowej przestrzeni",
-        dajemydrugiezycie: "6. DAJEMY DRUGIE ŻYCIE",
+        dajemydrugiezycie: "6.&nbsp;DAJEMY DRUGIE ŻYCIE",
         starymmeblom: "starym meblom",
         dbamyosrodowisko: `<span
                       style="font-size:0.6em">DBAMY</span><BR />O ŚRODOWISKO`,
@@ -443,6 +447,19 @@ export default {
         ponnpt: 'Pon.-  pt',
         sbnie: 'Sb.-Nd. nieczynne',
         znajdznas:'Znajdź nas równie na',
+        nameRequired: 'Imię i nazwisko jest wymagane',
+            phoneRequired: 'Telefon jest wymagany',
+            emailRequired: 'Email jest wymagany',
+            invalidEmail: 'Nieprawidłowy format email',
+            messageRequired: 'Wiadomość jest wymagana',
+            termsRequired: 'Musisz zaakceptować warunki',
+            messageSent: 'Wiadomość wysłana pomyślnie!',
+            sendError: 'Problem z wysłaniem wiadomości. Proszę spróbować ponownie.',
+            fileRequired: 'Plik jest wymagany',
+            fileInvalid: 'Nieprawidłowy format pliku. Proszę przesłać plik PDF, DOC lub DOCX',
+        wiadomosc:'Wiadomość',
+        akceptujwarunki:'Akceptuję warunki',
+        plik:'Plik',
       }
 
     },

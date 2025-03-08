@@ -70,7 +70,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             </div>
 
             <div class="row">
-              <div class="col-2" style="border-right: 4px solid white; height: 25vh;"></div>
+              <div class="col-2" style="border-right: 4px solid white; height: 28vh;"></div>
             </div>
           </div>
           <div class="col-3 col-auto order-sm-last" style=" justify-content: right;">
@@ -86,13 +86,14 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
     </div>
 
     <!-- SCREEN 2 -->
-    <div class="row" style="height: 100vh;">
+    <div class="row screen2">
       <div class="col">
         <div class="row">
           <div class="col-9" :style="{
             backgroundImage: `url(/bg/odadoz01.jpg)`,
             backgroundPosition: 'center bottom',
             backgroundSize: '100% auto',
+            backgroundRepeat: 'no-repeat',
           }">
             <div class="row">
               <div class="col-2" style="border-right: 4px solid white; background-color: black;">
@@ -107,8 +108,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
               </div>
             </div>
-            <div class="row">
-              <div class="col-2" style="border-right: 4px solid white; height: 20vh;">
+            <div class="row" >
+              <div class="col-2" style="border-right: 4px solid white; height: calc(min(20vh,10vw))">
 
               </div>
               <div class="col">
@@ -128,46 +129,46 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
             backgroundImage: `url(/bg/odadoz02.jpg)`,
             backgroundPosition: 'left bottom',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% auto',
+            backgroundSize: 'auto 100%',
           }">
           </div>
         </div>
-        <div class="row" style="padding-top: 3vh; height: 38vh; padding-left:3vw; padding-right:3vw">
-          <div class="col-1 fontBlack d-lg-block d-none"></div>
-          <div class="col fontBlack ">
-            <h5 class="bold"><span class="fontRed">1.</span> {{ $t('home.konsultacja') }}</h5>
+        <div class="row"   style="padding-left:3vw; padding-right:3vw">
+          
+          <div class="col-6 col-md-3 fontBlack " style="padding-top: 3vh; padding-bottom: 1vh;">
+            <h5 class="bold"><span class="fontRed">1.</span>&nbsp;{{ $t('home.konsultacja') }}</h5>
             {{ $t('home.konsultacjaText') }}
           </div>
-          <div class="col fontBlack">
-            <h5 class="bold"><span class="fontRed bold">2.</span> {{ $t('home.koncepcja') }}</h5>
+          <div class="col-6 col-md-3 fontBlack" style="padding-top: 3vh; padding-bottom: 1vh;">
+            <h5 class="bold"><span class="fontRed bold">2.</span>&nbsp;{{ $t('home.koncepcja') }}</h5>
             {{ $t('home.koncepcjaText') }}
 
           </div>
-          <div class="col fontBlack">
-            <h5 class="bold"><span class="fontRed">3.</span> {{ $t('home.projekt') }}</h5>
+          <div class="col-6 col-md-3 fontBlack" style="padding-top: 3vh; padding-bottom: 1vh;">
+            <h5 class="bold"><span class="fontRed">3.</span>&nbsp;{{ $t('home.projekt') }}</h5>
             {{ $t('home.projektText') }}
           </div>
-          <div class="col fontBlack">
-            <h5 class="bold"><span class="fontRed" >4.</span> {{ $t('home.realizacja') }}</h5>
+          <div class="col-6 col-md-3 fontBlack" style="padding-top: 3vh; padding-bottom: 1vh;">
+            <h5 class="bold"><span class="fontRed" >4.</span>&nbsp;{{ $t('home.realizacja') }}</h5>
             {{ $t('home.realizacjaText') }}
           </div>
-          <div class="col-1"></div>
+          
         </div>
       </div>
     </div>
 
     <!-- SCREEN 3 -->
-    <div class="row" style="height: 100vh; background-color: black;">
+    <div class="row screen3" style="background-color: black;">
       <div class="col">
         <div class="row" style="height: 65vh; background-color: black;">
           <div class="col-1"></div>
-          <div class="col-3" :style="{
+          <div class="col-lg-3 col-6" :style="{
             display: 'flex',
             alignItems: 'flex-end',
             backgroundImage: `url(bg/konstrukcjestalowe01.jpg)`,
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%',
+            backgroundSize: 'auto 100%',
             borderRight: '15px solid black',
             paddingBottom: '8vh',
 
@@ -179,23 +180,23 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
               {{ $t('home.stalowe') }}
             </h1>
           </div>
-          <div class="col-3" :style="{
+          <div class="col-lg-3 col-5" :style="{
             backgroundImage: `url(bg/konstrukcjestalowe02.jpg)`,
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%',
+            backgroundSize: 'auto 100%',
             borderRight: '15px solid black',
 
           }"></div>
-          <div class="col-3" :style="{
+          <div class="col-lg-3 d-none d-lg-block" :style="{
             backgroundImage: `url(bg/konstrukcjestalowe03.jpg)`,
             backgroundPosition: 'center bottom',
             backgroundRepeat: 'no-repeat',
-            backgroundSize: '100% 100%',
+            backgroundSize: 'auto 100%',
             borderRight: '15px solid black',
 
           }"></div>
-          <div class="col-2" :style="{
+          <div class="col-2 d-none d-lg-block" :style="{
             backgroundImage: `url(bg/konstrukcjestalowe04.jpg)`,
             backgroundPosition: 'center top',
             backgroundRepeat: 'no-repeat',
@@ -203,7 +204,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
           }"></div>
         </div>
-        <div class="row" style="height: 35vh; background-color: black;">
+        <div class="row" style="background-color: black; padding-bottom: 3vh;">
           <div class="col-1"></div>
           <div class="col-5" style="padding-top: 2vh; padding-left: 0px;" v-html="$t('home.konstrukcjeStaloweText')">
             
@@ -268,14 +269,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         </div>
 
       </div>
-      <div class="col-6" style="
-              padding-left: 3vw;
-              padding-right: 6vw;
-              padding-top: 3vh;
-              padding-bottom: 3vh;
-              font-size: 20px;
-              line-height: 1.6em;
-              ">
+      <div class="col-6 przestrzenianowo" >
         <h1 class="h0" style="line-height: 0.8em;padding-bottom: 0.8em;">{{ $t('home.fitout') }}<BR />
           <span style='font-size:0.6em'>– {{ $t('home.przestrzennanowo') }}</span>
         </h1>
@@ -314,26 +308,26 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
         <div class="row" style="background-color: white; height: 90vh;">
           <div class="col">
             <div class="row" style="height: 10h; padding-top: 3vh;">
-              <div class="col-5"></div>
+              <div class="col-5 d-none d-lg-block"></div>
               <div class="col-6">
                 <h1 class="h0" style="color: black;">{{ $t('home.odwizualizacji') }}</h1>
               </div>
               <div class="col-1"></div>
             </div>
             <div class="row" style=" ">
-              <div class="col-6"></div>
+              <div class="col-1 col-md-6"></div>
               <div class="col-5">
                 <h1 class="h0" style="color: black;">{{ $t('home.dorealizacji') }}</h1>
               </div>
               <div class="col-1"></div>
             </div>
             <div class="row" style="height: 50vh;">
-              <div class="col-6" style="display: flex;justify-content: center;align-items: center;">
+              <div class="col-12 col-md-6" style="display: flex;justify-content: center;align-items: center;">
                 <!-- <VueCompareImage :left-image="owdr01_1" :right-image="owdr01_2" /> -->
                 <!-- <img :src="bg/odwizualizacjidorealizacji01_01.jpg" /> -->
                 <VueCompareImage :left-image="owdr01_1" :right-image="owdr01_2" />
               </div>
-              <div class="col-6" style="display: flex;justify-content: center;align-items: center;">
+              <div class="col-12 col-md-6" style="display: flex;justify-content: center;align-items: center;">
                 <VueCompareImage :left-image="owdr02_1" :right-image="owdr02_2" />
                 <!-- <VueCompareImage :leftImage="bg/odwizualizacjidorealizacji02_01.jpg"
                   :rightImage="bg/odwizualizacjidorealizacji02_02.jpg" />; -->
@@ -410,15 +404,8 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
               ">&nbsp;</div>
             </div>
             <div class="row">
-              <div class="col-5"> </div>
-              <div class="col-7" style="
-                  background-color: black;
-                  padding-top: 1vh;
-                  padding-left: 4vw;
-                  padding-right: 20vw;
-                  line-height: 1.5em;
-                  height: 49.5vh;
-              " v-html="$t('home.przeprowadzka')">
+              <div class="col-2 col-md-5"> </div>
+              <div class="col-10 col-md-7 przeprowadzka" v-html="$t('home.przeprowadzka')">
               </div>
             </div>
 
@@ -436,23 +423,87 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
             <div class="row" style="height: 13vh;">
               <div class="col" style="text-align: center;">
-                <h1 class="fontBlack">{{ $t('home.zmianaLokalizacji') }}
+                <h1 class="fontBlack zmianaLokalizacji">{{ $t('home.zmianaLokalizacji') }}
                 </h1>
               </div>
             </div>
-            <div class="row">
+            <div class="row d-md-none">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4 fontBlack">
+                    <img :src="'bg/zaplanowanieharmonogramu.png'" /><BR />
+                    <h4 class="bold h4responsive" v-html="$t('home.zaplanowanieHarmonogramu')"></h4>
+                    {{ $t('home.prazzględnieniem') }}
+
+
+                  </div>
+                  <div class="col-4 fontBlack">
+                    <img :src="'bg/inwentaryzacja.png'" /><BR />
+                    <h4 class="bold h4responsive" v-html="$t('home.inwentaryzacja')"></h4>
+                    {{ $t('home.obecnegoBudynku') }}
+
+
+                  </div>
+                  <div class="col-4 fontBlack">
+                    <img :src="'bg/przygotowaniizabezpieczenie.png'" /><BR />
+                    <h4 class="bold h4responsive" v-html="$t('home.przygotowanieizabezpieczenie')"></h4>
+                    {{ $t('home.odsprzetu') }}
+
+                  </div> 
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="row">
+  
+
+                  <div class="col-4 fontBlack">
+                    <img :src="'bg/transport.png'" /><BR />
+                    <h4 class="bold h4responsive" v-html="$t('home.transport')"></h4>{{ $t('home.donowejlokalizacji') }}
+
+                  </div>
+                  <div class="col-4 fontBlack">
+                    <img :src="'bg/montaziaranzacja.png'" /><BR />
+                    <h4 class="bold h4responsive" v-html="$t('home.montaziaranzacja')"></h4>{{ $t('home.nowejprzestrzeni') }}
+                  </div>
+                  <div class="col-4 fontBlack">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col">
+                            <img :src="'bg/dajemydrugiezycie.png'" /><BR />
+                          </div>
+                        </div>
+                        <div class="row" style="height: 10vh;">
+                          <div class="col-12">
+                            <h4 class="bold h4responsive" v-html="$t('home.dajemydrugiezycie')"></h4>
+                            {{ $t('home.starymmeblom') }}
+                          </div>
+                        </div>
+                        <div class="row" style="height: 10vh;padding-right: 1vw;">
+                          <div class="col-9" style="border-right: 4px solid #f4b414">
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row d-none d-md-flex">
               <div class="col-4">
                 <div class="row">
-                  <div class="col-6 fontBlack">
+                  
+                  <div class="col-6 fontBlack" style="padding-left: 2vw;">
                     <img :src="'bg/zaplanowanieharmonogramu.png'" /><BR />
-                    <h4 class="bold h4responsive">{{ $t('home.zaplanowanieHarmonogramu') }}</h4>
+                    <h4 class="bold h4responsive" v-html="$t('home.zaplanowanieHarmonogramu')"></h4>
                     {{ $t('home.prazzględnieniem') }}
 
 
                   </div>
                   <div class="col-6 fontBlack">
                     <img :src="'bg/inwentaryzacja.png'" /><BR />
-                    <h4 class="bold h4responsive">{{ $t('home.inwentaryzacja') }}</h4>
+                    <h4 class="bold h4responsive" v-html="$t('home.inwentaryzacja')"></h4>
                     {{ $t('home.obecnegoBudynku') }}
 
 
@@ -463,19 +514,19 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-3 fontBlack">
                     <img :src="'bg/przygotowaniizabezpieczenie.png'" /><BR />
-                    <h4 class="bold h4responsive">{{ $t('home.przygotowanieizabezpieczenie') }}</h4>
+                    <h4 class="bold h4responsive" v-html="$t('home.przygotowanieizabezpieczenie')"></h4>
                     {{ $t('home.odsprzetu') }}
 
                   </div>
 
                   <div class="col-3 fontBlack">
                     <img :src="'bg/transport.png'" /><BR />
-                    <h4 class="bold h4responsive">{{ $t('home.transport') }} </h4>{{ $t('home.donowejlokalizacji') }}
+                    <h4 class="bold h4responsive" v-html="$t('home.transport')"></h4>{{ $t('home.donowejlokalizacji') }}
 
                   </div>
                   <div class="col-3 fontBlack">
                     <img :src="'bg/montaziaranzacja.png'" /><BR />
-                    <h4 class="bold h4responsive">{{ $t('home.montaziaranzacja') }}</h4>{{ $t('home.nowejprzestrzeni') }}
+                    <h4 class="bold h4responsive" v-html="$t('home.montaziaranzacja')"></h4>{{ $t('home.nowejprzestrzeni') }}
                   </div>
                   <div class="col-3 fontBlack">
                     <div class="row">
@@ -487,7 +538,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                         </div>
                         <div class="row" style="height: 10vh;">
                           <div class="col-12">
-                            <h4 class="bold h4responsive">{{ $t('home.dajemydrugiezycie') }}</h4>
+                            <h4 class="bold h4responsive" v-html="$t('home.dajemydrugiezycie')"></h4>
                             {{ $t('home.starymmeblom') }}
                           </div>
                         </div>
@@ -501,6 +552,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -510,17 +562,29 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
     <div class="row" style="height: 100vh; background-color: black;">
       <div class="col">
         <div class="row">
-          <div class="col-4" style="text-align: right; align-content: top; padding-right: 0px;">
-            <img :src="'bg/srodowisko.jpg'" style="height: 80vh;padding-top: 10vh;" />
+          <div class="col-1 d-none d-md-block"></div> 
+          <div class="col-1 col-md-3" 
+          :style="{
+          backgroundImage: `url(bg/srodowisko.jpg)`,
+          backgroundPosition: 'center bottom',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'auto 100% ',
+          height: '80vh',
+          marginTop: '10vh',
+            
+        }"
+          
+          >
+            <!-- <img :src="'bg/srodowisko.jpg'" style="height: 80vh;padding-top: 10vh;" /> -->
           </div>
-          <div class="col-8">
+          <div class="col-11 col-md-8">
             <div class="row">
-              <div class="col-9 fontBlack" style="padding-top: 10vh;">
+              <div class="col-9 fontBlack" style="padding-top: 12vh;">
                 <div>
                   <h1 class="h0 fontWhite" style="margin-left:-8vw; line-height: 0.8em;"
                     v-html="$t('home.dbamyosrodowisko')"></h1>
                 </div>
-                <div class="fontWhite" style="padding-top: 5vh;">
+                <div class="fontWhite dzialamywbranzy" style="padding-top: 2vh;">
                   <p>
                     {{ $t('home.dzialamywbranzy') }}
                   </p>
@@ -532,7 +596,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-12">
                     <div class="row" style="height: 10vh;">
-                      <div class="col-6" style="border-right: 4px solid #f4b414">
+                      <div class="col-7 col-md-6" style="border-right: 4px solid #f4b414">
                       </div>
                     </div>
                   </div>
@@ -540,10 +604,10 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-12">
                     <div class="row">
-                      <div class="col-6"
+                      <div class="col-7 col-md-6"
                         style="height:10vh; color:#f4b414; text-align: right; padding-top:10px; padding-bottom:10px; padding-right: 0px;">
                         <div style="position: absolute; width: 200px; margin-left:auto; right:0">
-                          <h4>{{ $t('home.policzymyTwojSlad') }}
+                          <h4 class="h4responsiveSmall">{{ $t('home.policzymyTwojSlad') }}
                           </h4>
                         </div>
                       </div>
@@ -553,7 +617,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
                 <div class="row">
                   <div class="col-12">
                     <div class="row" style="height: 80vh;">
-                      <div class="col-6" style="border-right: 4px solid #f4b414">
+                      <div class="col-7 col-md-6" style="border-right: 4px solid #f4b414">
 
                       </div>
                     </div>
@@ -567,33 +631,45 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
     </div>
 
     <!-- SCREEN 10 -->
-    <div class="row" :style="{
+    <div class="row screen10"  :style="{
       backgroundImage: `url(/bg/meblezdrugiejreki.jpg)`,
 
       backgroundPosition: 'left bottom',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: '100vh'
     }">
 
       <div class="col">
 
         <div class="row" style="height: 10vh;">
-          <div class="col-10" style="">
+          <div class="col-1 col-md-3" >
+
+          </div>
+          <div class="col-7 col-md-5" >
+          </div>
 
 
+          <div class="col-1 col-md-2">
+            <div class="row">
+              <div class="col-12" ></div>
+            </div>
 
           </div>
 
           <div class="col-2" style="">
             <div class="row">
-              <div class="col-6" style="height: 10vh; border-right: 4px solid #f4b414"></div>
+              <div class="col-11 col-md-6" style="height: 12vh; border-right: 4px solid #f4b414;"></div>
             </div>
+            <div class="row">
+              <div class="col-11"></div>
+            </div>
+
+
           </div>
         </div>
 
         <div class="row">
-          <div class="col-3" style="background-color: black;">
+          <div class="col-1 col-md-3" style="background-color: black;">
             <div class="row" style="height: 18vh; ">
               <div class="col" style="background-color: white;">
 
@@ -603,13 +679,13 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
               <div class="col-12" style="background-color: black; height: 6vh"></div>
             </div>
           </div>
-          <div class="col-5" style="background-color: #f4b414; padding-top: 4vh; padding-left: 2vw; padding-bottom: 4vh;">
-            <h1 class="fontWhite" style="font-size:3.5rem;" v-html="$t('home.meblezdrugiejreki')">
+          <div class="col-7 col-md-5" style="background-color: #f4b414; padding-top: 4vh; padding-left: 2vw; padding-bottom: 4vh;">
+            <h1 class="fontWhite h1responsive"  v-html="$t('home.meblezdrugiejreki')">
             </h1>
           </div>
 
 
-          <div class="col-2" style="">
+          <div class="col-1 col-md-2" style="">
             <div class="row">
               <div class="col-12" style="height: 12vh;  border-bottom: 4px solid #f4b414"></div>
             </div>
@@ -618,8 +694,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
 
           <div class="col-2" style="">
             <div class="row">
-              <div class="col-6" style="height: 12vh; border-right: 4px solid #f4b414;border-bottom: 4px solid #f4b414">
-              </div>
+              <div class="col-11 col-md-6" style="height: 12vh; border-right: 4px solid #f4b414;border-bottom: 4px solid #f4b414"></div>
             </div>
             <div class="row">
               <div class="col-11"></div>
@@ -629,7 +704,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
           </div>
         </div>
         <div class="row">
-          <div class="col-6"
+          <div class="col-8 col-md-6 szukaszmeblidoswojegobiura"
             style="background-color: black; padding-left: 5vw; padding-right: 5vw; padding-top: 3vh; padding-bottom: 3vh;" v-html="$t('home.szukaszmeblidoswojegobiura')">
 
           </div>
@@ -870,4 +945,112 @@ export default {
 .h4responsive {
   font-size: 2vmin;
 } 
+
+.przestrzenianowo{
+  padding-left: 3vw;
+  padding-right: 6vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  font-size: 1 em;
+  line-height: 1.1em;
+}
+
+
+.h4responsive{
+  font-size: 0.7em;
+}
+
+
+.zmianaLokalizacji{
+  font-size: 1.7em;
+}
+
+
+.przeprowadzka{
+        background-color: black;
+        padding-top: 1vh;
+        padding-left: 4vw;
+        padding-right: 20vw;
+        line-height: 1.4em;
+        height: 49.5vh;
+        font-size: 0.7em;
+
+}
+
+.h4responsiveSmall{
+  font-size: 0.9em;
+}
+
+.dzialamywbranzy{
+  font-size: 0.8em;
+}
+
+.h1responsive{
+  font-size: 1em;
+}
+
+.screen10{
+  height: 150vh;
+}
+
+.szukaszmeblidoswojegobiura{
+  font-size: 0.8em;
+}
+
+@media screen and (min-width: 768px) {
+  .h4responsiveSmall{
+  font-size: 1.3em;
+}
+
+
+  .h4responsive{
+  font-size: calc(min(1.4vw , 1em));
+}
+
+.dzialamywbranzy{
+  font-size: 1em;
+}
+
+
+  .screen2{
+    height: 100vh;
+  }
+  .screen3{
+    height: 100vh;
+  }
+ 
+  .przestrzenianowo{
+  padding-left: 3vw;
+  padding-right: 6vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  font-size: 20px;
+  line-height: 1.6em;
+}
+
+.przeprowadzka{
+  background-color: black;
+  padding-top: 1vh;
+  padding-left: 4vw;
+  padding-right: 20vw;
+  line-height: 1.1em;
+  height: 49.5vh;
+  font-size: 1.12em;
+}
+
+.h1responsive{
+  font-size: 2em;
+}
+
+.screen10{
+  height: 100vh;
+}
+
+.szukaszmeblidoswojegobiura{
+  font-size: 1em;
+
+}
+}
+
+
 </style>

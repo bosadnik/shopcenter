@@ -37,7 +37,7 @@ const validateForm = () => {
   }
   if (!formData.value.message) errors.value.message = 'Message is required'
   if (!formData.value.acceptTerms) errors.value.terms = 'You must accept the terms'
-
+  console.log(errors.value)
   return Object.keys(errors.value).length === 0
 }
 
@@ -51,38 +51,59 @@ const handleSubmit = async () => {
   if (!validateForm()) return
 
   loading.value = true
-  const formDataToSend = new FormData()
-  formDataToSend.append('name', formData.value.name)
-  formDataToSend.append('phone', formData.value.phone)
-  formDataToSend.append('email', formData.value.email)
-  formDataToSend.append('message', formData.value.message)
-  if (formData.value.file) {
-    formDataToSend.append('file', formData.value.file)
-  }
-
   try {
-    // Simulate API call with 2 second delay
-    const response = await wait(2000)
+    // Convert file to base64 if exists
+    let fileData = null;
+    if (formData.value.file) {
+      fileData = await new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = (e) => resolve(e.target.result);
+        reader.readAsDataURL(formData.value.file);
+      });
+    }
 
+    const dataToSend = {
+      name: formData.value.name,
+      phone: formData.value.phone,
+      email: formData.value.email,
+      message: formData.value.message,
+      file: fileData
+    };
+
+    const response = await fetch('http://localhost:8000/mailsend.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToSend)
+    });
+    
     if (!response.ok) {
-      throw new Error('Network response was not ok')
+      throw new Error('Network response was not ok');
     }
-
-    // Clear form after successful submission
-    formData.value = {
-      name: '',
-      phone: '',
-      email: '',
-      message: '',
-      file: null,
-      acceptTerms: false
+    
+    const result = await response.json();
+    if (result.success) {
+      // Show success message
+      alert(result.message);
+      // Clear form
+      formData.value = {
+        name: '',
+        phone: '',
+        email: '',
+        message: '',
+        file: null,
+        acceptTerms: false
+      };
+    } else {
+      // Show error message
+      alert(result.message);
     }
-    alert('Message sent successfully!')
   } catch (error) {
-    console.error('Error:', error)
-    alert('Failed to send message. Please try again.')
+    console.error('Error:', error);
+    alert('An error occurred while sending the message. Please try again.');
   } finally {
-    loading.value = false
+    loading.value = false;
   }
 }
 
@@ -99,7 +120,7 @@ const handleFileChange = (event) => {
     <!-- SCREEN 1 -->
     <div class="row" :style="{
       backgroundImage: `url(${mainbg3})`,
-      height: '85vh',
+     
       backgroundColor: 'black'
     }">
       <div class="col-12">
@@ -107,8 +128,8 @@ const handleFileChange = (event) => {
           <div class="col-12">
           </div>
         </div>
-        <div class="row" style="height: 65vh;">
-          <div class="col-1" style="background-color: rgba(0, 0, 0, 0.65);">
+        <div class="row" >
+          <div class="col-md-1 d-none d-md-block" style="background-color: rgba(0, 0, 0, 0.65);">
             <div class="row" style="height: 40%">
               <div class="col-12">&nbsp;</div>
             </div>
@@ -117,7 +138,7 @@ const handleFileChange = (event) => {
               <div class="col-6" style="border-top: 4px solid #f4b414;">&nbsp;</div>
             </div>
           </div>
-          <div class="col-4"
+          <div class="col-12 col-md-5"
             style="background-color: rgba(0, 0, 0, 0.65); padding: 3vh; height: 60vh; padding-top: 20vh; height: 100%; ">
 
             SHOPCENTER A.Kusina, P.Iwanek s.c.<BR />
@@ -146,23 +167,11 @@ const handleFileChange = (event) => {
               <a href="https://www.instagram.com/shopcenterdesign" target="_blank">
                 <FontAwesomeIcon :icon="faInstagram" style="font-size: 1.1em;" />
               </a>              
-              <!-- <a href="https://www.twitter.com/shopcenter" target="_blank">
-                <FontAwesomeIcon :icon="faTwitter" />
-              </a>
-              <a href="https://www.linkedin.com/shopcenter" target="_blank">
-                <FontAwesomeIcon :icon="faLinkedin" />
-              </a>
-              <a href="https://www.youtube.com/shopcenter" target="_blank">
-                <FontAwesomeIcon :icon="faYoutube" />
-              </a>
-              <a href="https://www.pinterest.com/shopcenter" target="_blank">
-                <FontAwesomeIcon :icon="faPinterest" />
-              </a><BR /> -->
             </div>
 
 
           </div>
-          <div class="col-6" style="background-color: rgba(0, 0, 0, 0.65); padding: 4vh">
+          <div class="col-12 col-md-6" style="background-color: rgba(0, 0, 0, 0.65); padding: 4vh">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2565.604858907046!2d20.141564576915783!3d49.981268421034414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471640c3f0806823%3A0x9a4a141b6a73c7c0!2sBodzan%C3%B3w%20583%2C%2032-020%20Wieliczka!5e0!3m2!1spl!2spl!4v1734882521559!5m2!1spl!2spl"
               style="border:0;" allowfullscreen="" loading="lazy" class="google-maps"
@@ -170,7 +179,7 @@ const handleFileChange = (event) => {
           </div>
         </div>
         <div class="row" style="height: 15vh;">
-          <div class="col-1">
+          <div class="col-1 d-none d-md-block">
             <div class="row" style="height: 100%;">
               <div class="col-6" style="border-right: 4px solid #f4b414;">&nbsp;</div>
             </div>
@@ -181,7 +190,7 @@ const handleFileChange = (event) => {
     <div class="row" style="background-color: black;">
       <div class="col-12">
         <div class="row">
-          <div class="col-1">
+          <div class="col-1 d-none d-md-block">
             <div class="row" style="height: 5vh">
               <div class="col-6" style="border-right: 4px solid #f4b414;">
                 &nbsp;
@@ -195,7 +204,7 @@ const handleFileChange = (event) => {
     <div class="row" style="background-color: black; padding-bottom: 10vh;">
       <div class="col-12">
         <div class="row">
-          <div class="col-1">
+          <div class="col-1 d-none d-md-block">
             <div class="row">
               <div class="col-6" style="border-right: 4px solid #f4b414;">
                 &nbsp;
@@ -205,93 +214,78 @@ const handleFileChange = (event) => {
               </div>
             </div>
           </div>
-          <div class="col-10" style="background-color: #f4b414;">
+          <div class="col-12 col-md-10" style="background-color: #f4b414;">
             <div class="row">
               
               <!-- MAIL FORM -->
-              <!-- <div class="col-5" style="padding: 3vh; color:black;">
+              <!-- <div class="col-12 col-md-5" style="padding: 3vh; color:black;">
                 <div class="row">
                   <div class="col">&nbsp;
                   </div>
                 </div>
 
                 <div class="row">
-                  <div class="col-10" style="background-color: rgba(255,255,255,0.4); padding: 3vh; border-radius: 10px; box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 5%);">
+                  <div class="col-12" style="background-color: rgba(255,255,255,0.4); padding: 3vh; border-radius: 10px; box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 5%);">
                     <div class="row">
                       <div class="col">
                         <h3>{{ $t('kontakt.skontaktujsieznami') }}</h3>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-6">
-                        <div class="row">
-                          <div class="col" style="padding-right: 0;">
-                            <input class="form-control" :class="{ 'is-invalid': errors.name }" type="text" 
-                              v-model="formData.name"
-                              :placeholder="$t('kontakt.imieinazwisko')"
-                              :aria-label="$t('kontakt.imieinazwisko')">
-                            <div class="invalid-feedback" v-if="errors.name">{{ errors.name }}</div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col" style="padding-right: 0;">
-                            <input class="form-control" :class="{ 'is-invalid': errors.phone }" type="text"
-                              v-model="formData.phone"
-                              :placeholder="$t('kontakt.formtelefon')"
-                              :aria-label="$t('kontakt.telefon')">
-                            <div class="invalid-feedback" v-if="errors.phone">{{ errors.phone }}</div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col" style="padding-right: 0;">
-                            <input class="form-control" :class="{ 'is-invalid': errors.email }" type="email"
-                              v-model="formData.email"
-                              :placeholder="$t('kontakt.email')"
-                              :aria-label="$t('kontakt.email')">
-                            <div class="invalid-feedback" v-if="errors.email">{{ errors.email }}</div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col" style="padding-right: 0;">
-                            <input class="form-control" type="file" id="formFile" style="height:45px;"
-                              @change="handleFileChange">
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="col-6" style="padding-left: 0;">
-                        <textarea class="form-control" :class="{ 'is-invalid': errors.message }"
-                          v-model="formData.message"
-                          id="exampleFormControlTextarea1" rows="6"></textarea>
-                        <div class="invalid-feedback" v-if="errors.message">{{ errors.message }}</div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-check">
-                          <input class="form-check-input" :class="{ 'is-invalid': errors.terms }" type="checkbox"
-                            v-model="formData.acceptTerms"
-                            id="flexCheckDefault">
-                          <label class="form-check-label smallitalic4conditions" for="flexCheckDefault">
-                            {{ $t('kontakt.akceptujewarunki') }}
-                          </label>
-                          <div class="invalid-feedback" v-if="errors.terms">{{ errors.terms }}</div>
+                    <form @submit.prevent="handleSubmit">
+                      <div class="row">
+                        <div class="col">
+                          <input type="text" v-model="formData.name" class="form-control" :placeholder="$t('kontakt.imieinazwisko')" required>
+                          <div v-if="errors.name" class="invalid-feedback">{{ errors.name }}</div>
                         </div>
                       </div>
-                    </div>
-                    <div class="row" style="padding-top: 2vh;">
-                      <div class="col">
-                        <button type="submit" class="btn btn-primary" @click="handleSubmit">
-                          {{ $t('kontakt.wyslij') }}
-                        </button>
+                      <div class="row">
+                        <div class="col">
+                          <input type="email" v-model="formData.email" class="form-control" :placeholder="$t('kontakt.email')" required>
+                          <div v-if="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+                        </div>
                       </div>
-                    </div>
+                      <div class="row">
+                        <div class="col">
+                          <input type="tel" v-model="formData.phone" class="form-control" :placeholder="$t('kontakt.telefon')" required>
+                          <div v-if="errors.phone" class="invalid-feedback">{{ errors.phone }}</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <textarea v-model="formData.message" class="form-control" :placeholder="$t('kontakt.wiadomosc')" required></textarea>
+                          <div v-if="errors.message" class="invalid-feedback">{{ errors.message }}</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <input type="file" @change="handleFileChange" class="form-control" accept=".pdf,.doc,.docx">
+                          <div v-if="errors.file" class="invalid-feedback">{{ errors.file }}</div>
+                         </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col">
+                          <div class="form-check">
+                            <input type="checkbox" v-model="formData.acceptTerms" class="form-check-input" id="termsCheck">
+                            <label class="form-check-label" for="termsCheck">{{ $t('kontakt.akceptujwarunki') }}</label>
+                          </div>
+                          <div v-if="errors.terms" class="invalid-feedback">{{ errors.terms }}</div>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col">
+                          <button type="submit" class="btn btn-dark" :disabled="loading">
+                            <span v-if="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                            {{ $t('kontakt.wyslij') }}
+                          </button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
 
               </div> -->
               <!-- MAIL FOMR END -->
-              <div class="col-5" style="padding: 3vh">
+              <div class="col-12 col-md-5" style="padding: 3vh">
                 <div class="addresspad">
                   <h5>{{ $t('kontakt.dzialhandlowy') }}</h5>
                   <a href="mailto:handel@shopcenter.pl">handel@shopcenter.pl</a><br />

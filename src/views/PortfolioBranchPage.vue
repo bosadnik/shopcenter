@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row" :style="{ height: '7vh', backgroundColor: `${color}` }">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <h3>{{ $t(`balloons.${title}`) }} - {{ page.name.toUpperCase() }} {{ page.description.toUpperCase() }}</h3>
+                        <h3 class="h3-responsive">{{ $t(`balloons.${title}`) }} - {{ page.name.toUpperCase() }} {{ page.description.toUpperCase() }}</h3>
                     </div>
                 </div>
             
@@ -15,7 +15,7 @@
                 <!-- <LightGallery :images="page.imgs" :index="idx" :disable-scroll="true" @close="idx = null" /> -->
 
                 <div class="row">
-                    <div class="col-11">
+                    <div class="col-md-11 col-12">
 
                         <div class="row">
                             
@@ -25,7 +25,7 @@
                                 :slide="slide"
                             />
                             
-                            <div class="col-4 col-thumbnail" v-for="(img) in page.images" :key="img.index"
+                            <div class="col-md-4 col-6 col-thumbnail" v-for="(img) in page.images" :key="img.index"
                                 @click="openLightboxOnSlide(img.index)">
                                 <img :src="img.thumbnail" class="img-fluid thumbnail" />
                             </div>
@@ -146,4 +146,16 @@ img.fade-leave-active {
 .thumbnail:hover {
     opacity: 1;
 }
+
+.h3-responsive {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .h3-responsive {
+        font-size: 1em;
+    }
+}
+
+
 </style>

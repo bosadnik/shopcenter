@@ -9,9 +9,9 @@ import { faPhone, faPhoneAlt, faSquarePhone } from '@fortawesome/free-solid-svg-
   <footer>
     <div class="container-fluid">
 <div class="row justify-content-md-center">
-  <div class="col-12">
+  <div class="col-12" style="padding-top: 2vh;">
     <div class="row">
-        <div class="col">
+        <div class="col-12 col-md-4">
           <div class="name">SHOPCENTER A.Kusina, P.Iwanek s.c.<br /></div>
           <div class="addres">
             Bodzanów 583 <BR />
@@ -19,21 +19,22 @@ import { faPhone, faPhoneAlt, faSquarePhone } from '@fortawesome/free-solid-svg-
             NIP: 678-295-87-65
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-md-4">
           <div class="contacts">
-          <img src="@/assets/envelope.jpg"  /> biuro@shopcenter.pl<br/>
-          <FontAwesomeIcon :icon="faHouse" />
-          <FontAwesomeIcon :icon="faPhone" style="font-size: 2rem;" />&nbsp;+48 601 765 432 | 609 60 40 80
+          <img src="@/assets/envelope.jpg" class="envelope" /> biuro@shopcenter.pl<br/>
+          <FontAwesomeIcon :icon="faPhone" class="phone" />&nbsp;+48 601 765 432 | 609 60 40 80
           </div>
         </div>
-        <div class="col d-flex align-items-center">
+        <div class="col-12 col-md-4 d-flex align-items-center">
 
           <div class="sociallinks">
               <a href="https://www.facebook.com/shopcenterdesign" target="_blank">
+                <div style="display: inline-block; position: relative; top: -3px;">
                 <FontAwesomeIcon :icon="faFacebookF" style="font-size: 1.1em;" />
+                </div>
               </a>
               <a href="https://www.instagram.com/shopcenterdesign" target="_blank">
-                <FontAwesomeIcon :icon="faInstagram" style="font-size: 1.3em;" />
+                <FontAwesomeIcon :icon="faInstagram" style="font-size: 1.4em;" />
               </a>
               <!-- <a href="https://www.linkedin.com/shopcenter" target="_blank">
                 <FontAwesomeIcon :icon="faLinkedin" />
@@ -112,4 +113,25 @@ footer a {
    line-height: 2.5em;
 }
 
+.phone {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    font-size: 0.9rem;
+  }
+  .name {
+    font-size: 1rem;
+  }
+  .addres {
+    font-size: 0.9rem;
+  }
+  .envelope {
+    width: 1.5rem;
+  }
+  .phone {
+    font-size: 1.0
+  }
+}
 </style>

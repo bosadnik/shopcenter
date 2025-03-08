@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row" :style="{ height: '7vh', backgroundColor: `${color}` }">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <h3>{{ $t(`balloons.${title}`) }}</h3>
+                        <h3 class="h3-responsive">{{ $t(`balloons.${title}`) }}</h3>
                     </div>
                 </div>
 
@@ -13,7 +13,7 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-11">
+                    <div class="col-md-11 col-12">
                         <div class="row">
                             <ImageLinkHover
                                 v-for="item in catalog" 
@@ -22,7 +22,9 @@
                                 :imgUrl="`${item.folder}/${item.img}`"
                                 :name="item.name"
                                 :description="item.description"
-                                class="col-4 "
+                                nameClass="nameClass"
+                                descriptionClass="descriptionClass"
+                                class="col-md-4 col-6"
                             />
                             <!-- <div v-for="item in catalog" :key="item.key" class="col-4 portfolioBoxSmall"
                                 :style="{ backgroundImage: `url(${require(`../assets/portfolio/${item.folder}/${item.img}`)})` }">
@@ -89,6 +91,28 @@ export default {
     },
 };
 </script>
-<style scoped>
+<style>
+.nameClass {
+    font-size: 2rem;
+}
+.descriptionClass { 
+    font-size: 1rem;
+}
 
+.h3-responsive {
+    font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nameClass {
+        font-size: 1rem;
+    }
+    .descriptionClass {
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+    .h3-responsive {
+        font-size: 1em;
+    }
+}
 </style>

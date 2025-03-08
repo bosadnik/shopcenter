@@ -60,7 +60,7 @@ let catalog = [
     description:"Sami Swoi, Słomniki",
     folder:"handelSklepy/EuroSklepSamiSwoiSlomniki",
     img:"glowne.png",
-    count: 11,
+    count: 10,
     imagesName: "SL_logo",
     imagesFormat: "png",
     imagesThumbnailName: "small",

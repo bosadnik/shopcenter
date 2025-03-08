@@ -1,7 +1,7 @@
 <template>
   <div class="header-bar">
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-dark">
         <router-link to="/" class="navbar-brand">
           <svg
             version="1.1"
@@ -94,12 +94,7 @@
 </g>
 </svg>
         </router-link>
-        <h5 class="white font-spreded fdandp" style="
-            position: absolute;
-            left: 245px;
-            top: 105px;
-            ">
-                  FURNITURE DESIGN & PRODUCTION
+        <h5 class="white font-spreded fdandp" >FURNITURE DESIGN & PRODUCTION
                 </h5>
         <button
           class="navbar-toggler"
@@ -218,13 +213,67 @@ export default {
   margin-left: -30px;
   fill: rgb(255,255 , 255);
 }
+
+.fdandp{
+  font-size: 1.2em;
+  position: absolute;
+            left: 245px;
+            top: 105px;
+}
+
+/* Medium screens */
+@media screen and (max-width: 1170px) {
+   .fdandp{
+    font-size: 1.0em;
+  position: absolute;
+            left: 175px;
+            top: 112px;
+  }
+}
+
 .font-spreded{
   letter-spacing: 0.3em;
 }
-.fdandp{
-  font-size: 1.2em;
-}
+
 .menu{
   margin-top: 80px;
 }
+
+/* Medium screens */
+@media screen and (max-width: 992px) {
+  .sc_logo_top {
+    height: 120px;
+  }
+
+  .fdandp{
+    font-size: 0.8em;
+    position: absolute;
+              left: 220px;
+              top: 80px;
+  }
+  .menu{
+    margin-top: 0px;
+  }
+}
+/* Small screens */
+@media screen and (max-width: 768px) {
+  .sc_logo_top {
+    height: 90px;
+    margin-left: -15px;
+  }
+  .fdandp{
+  font-size: 0.65em;
+  position: absolute;
+            left: 90px;
+            top: 50px;
+}
+    .font-spreded{
+      letter-spacing: 0.01em;
+    }
+
+}
+
+
+
+
 </style>

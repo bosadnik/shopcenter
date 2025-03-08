@@ -3,7 +3,7 @@
         <router-link :to="`${linkTo}`" class="portfolioLink">
             <div class="portfolioBoxSmallLink">
                 <h1 :class="nameClass">{{ name }}</h1>
-                {{ description }}
+                <div :class="descriptionClass">{{ description }}</div>
             </div>
             <div class="portfolioBoxSmall"
                 :style="{ backgroundImage: `url('${imgUrl}')` }">
@@ -40,6 +40,10 @@ export default {
             required: true
         },
         nameClass: {
+            type: String,
+            required: false
+        },
+        descriptionClass: {
             type: String,
             required: false
         },
