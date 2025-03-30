@@ -11,11 +11,14 @@ const formData = ref({
   email: '',
   message: '',
   file: null,
-  acceptTerms: false
+  acceptTerms: false,
+  fileName: null
 })
 
 const loading = ref(false)
 const errors = ref({})
+const showSuccessMessage = ref(false)
+const errorMessage = ref('')
 
 const validateEmail = (email) => {
   return String(email)
@@ -51,13 +54,27 @@ const handleSubmit = async () => {
   if (!validateForm()) return
 
   loading.value = true
+  showSuccessMessage.value = false
+  errorMessage.value = ''
   try {
     // Convert file to base64 if exists
     let fileData = null;
     if (formData.value.file) {
+      console.log('File selected:', formData.value.file.name);
+      console.log('File size:', formData.value.file.size);
+      console.log('File type:', formData.value.file.type);
+      
       fileData = await new Promise((resolve) => {
         const reader = new FileReader();
-        reader.onload = (e) => resolve(e.target.result);
+        reader.onload = (e) => {
+          console.log('File read successfully');
+          console.log('Base64 data length:', e.target.result.length);
+          resolve(e.target.result);
+        };
+        reader.onerror = (e) => {
+          console.error('Error reading file:', e);
+          resolve(null);
+        };
         reader.readAsDataURL(formData.value.file);
       });
     }
@@ -67,8 +84,11 @@ const handleSubmit = async () => {
       phone: formData.value.phone,
       email: formData.value.email,
       message: formData.value.message,
-      file: fileData
+      file: fileData,
+      fileName: formData.value.fileName
     };
+
+    console.log('Sending data with file:', fileData ? 'yes' : 'no');
 
     const response = await fetch('http://localhost:8000/mailsend.php', {
       method: 'POST',
@@ -79,13 +99,12 @@ const handleSubmit = async () => {
     });
     
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error(response.message);
     }
     
     const result = await response.json();
     if (result.success) {
-      // Show success message
-      alert(result.message);
+      showSuccessMessage.value = true;
       // Clear form
       formData.value = {
         name: '',
@@ -93,22 +112,34 @@ const handleSubmit = async () => {
         email: '',
         message: '',
         file: null,
-        acceptTerms: false
+        acceptTerms: false,
+        fileName: null
       };
     } else {
-      // Show error message
-      alert(result.message);
+      errorMessage.value = result.message;
+      console.error(result.message);
     }
   } catch (error) {
     console.error('Error:', error);
-    alert('An error occurred while sending the message. Please try again.');
+    errorMessage.value = 'An error occurred while sending the message. Please try again.';
   } finally {
     loading.value = false;
   }
 }
 
 const handleFileChange = (event) => {
-  formData.value.file = event.target.files[0]
+  const file = event.target.files[0];
+  if (file) {
+    console.log('File selected:', file.name);
+    console.log('File size:', file.size);
+    console.log('File type:', file.type);
+    formData.value.file = file;
+    formData.value.fileName = file.name;
+  } else {
+    console.log('No file selected');
+    formData.value.file = null;
+    formData.value.fileName = null;
+  }
 }
 </script>
 <template>
@@ -216,9 +247,8 @@ const handleFileChange = (event) => {
           </div>
           <div class="col-12 col-md-10" style="background-color: #f4b414;">
             <div class="row">
-              
               <!-- MAIL FORM -->
-              <!-- <div class="col-12 col-md-5" style="padding: 3vh; color:black;">
+              <div class="col-12 col-md-5" style="padding: 3vh; color:black;">
                 <div class="row">
                   <div class="col">&nbsp;
                   </div>
@@ -226,64 +256,85 @@ const handleFileChange = (event) => {
 
                 <div class="row">
                   <div class="col-12" style="background-color: rgba(255,255,255,0.4); padding: 3vh; border-radius: 10px; box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 5%);">
+                    <!-- Success/Error Messages -->
+                    <div v-if="showSuccessMessage" class="alert alert-success" role="alert">
+                      <i class="fas fa-check-circle me-2"></i>
+                      {{ $t('kontakt.mailwyslany') }}
+                    </div>
+                    <div v-if="errorMessage" class="alert alert-danger" role="alert">
+                      <i class="fas fa-exclamation-circle me-2"></i>
+                      {{ errorMessage }}
+                    </div>
+                    
                     <div class="row">
                       <div class="col">
                         <h3>{{ $t('kontakt.skontaktujsieznami') }}</h3>
                       </div>
                     </div>
-                    <form @submit.prevent="handleSubmit">
-                      <div class="row">
-                        <div class="col">
-                          <input type="text" v-model="formData.name" class="form-control" :placeholder="$t('kontakt.imieinazwisko')" required>
-                          <div v-if="errors.name" class="invalid-feedback">{{ errors.name }}</div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <input type="email" v-model="formData.email" class="form-control" :placeholder="$t('kontakt.email')" required>
-                          <div v-if="errors.email" class="invalid-feedback">{{ errors.email }}</div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <input type="tel" v-model="formData.phone" class="form-control" :placeholder="$t('kontakt.telefon')" required>
-                          <div v-if="errors.phone" class="invalid-feedback">{{ errors.phone }}</div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <textarea v-model="formData.message" class="form-control" :placeholder="$t('kontakt.wiadomosc')" required></textarea>
-                          <div v-if="errors.message" class="invalid-feedback">{{ errors.message }}</div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <input type="file" @change="handleFileChange" class="form-control" accept=".pdf,.doc,.docx">
-                          <div v-if="errors.file" class="invalid-feedback">{{ errors.file }}</div>
-                         </div>
-                      </div>
-                      <div class="row mt-3">
-                        <div class="col">
-                          <div class="form-check">
-                            <input type="checkbox" v-model="formData.acceptTerms" class="form-check-input" id="termsCheck">
-                            <label class="form-check-label" for="termsCheck">{{ $t('kontakt.akceptujwarunki') }}</label>
+                    <div class="form-wrapper">
+                      <form @submit.prevent="handleSubmit">
+                        <div class="row">
+                          <div class="col">
+                            <input type="text" v-model="formData.name" class="form-control" :placeholder="$t('kontakt.imieinazwisko')" required>
+                            <div v-if="errors.name" class="invalid-feedback">{{ errors.name }}</div>
                           </div>
-                          <div v-if="errors.terms" class="invalid-feedback">{{ errors.terms }}</div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <input type="email" v-model="formData.email" class="form-control" :placeholder="$t('kontakt.email')" required>
+                            <div v-if="errors.email" class="invalid-feedback">{{ errors.email }}</div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col">
+                            <input type="tel" v-model="formData.phone" class="form-control" :placeholder="$t('kontakt.telefon')" required>
+                            <div v-if="errors.phone" class="invalid-feedback">{{ errors.phone }}</div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col">
+                            <textarea v-model="formData.message" class="form-control" :placeholder="$t('kontakt.wiadomosc')" rows="5" required></textarea>
+                            <div v-if="errors.message" class="invalid-feedback">{{ errors.message }}</div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col">
+                            <input type="file" class="form-control" @change="handleFileChange" 
+                              accept=".pdf,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.txt,.rtf,.odt,.ods,.odp,.jpg,.jpeg,.png,.gif,.bmp,.webp">
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col">
+                            <div class="form-check">
+                              <input type="checkbox" v-model="formData.acceptTerms" class="form-check-input" id="termsCheck">
+                              <label class="form-check-label" for="termsCheck">{{ $t('kontakt.akceptujwarunki') }}</label>
+                            </div>
+                            <div v-if="errors.terms" class="invalid-feedback">{{ errors.terms }}</div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col">
+                            <button type="submit" class="btn btn-dark" :disabled="loading">
+                              <span v-if="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                              {{ $t('kontakt.wyslij') }}
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                      <!-- Form Loading Overlay -->
+                      <div v-if="loading" class="form-loading-overlay">
+                        <div class="loading-content">
+                          <div class="spinner-border text-dark" role="status">
+                            <!-- <span class="visually-hidden">Loading...</span> -->
+                          </div>
+                          <div class="mt-2 text-dark">{{ $t('kontakt.wysylanie') }}</div>
                         </div>
                       </div>
-                      <div class="row mt-3">
-                        <div class="col">
-                          <button type="submit" class="btn btn-dark" :disabled="loading">
-                            <span v-if="loading" class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
-                            {{ $t('kontakt.wyslij') }}
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+                    </div>
                   </div>
                 </div>
 
-              </div> -->
+              </div>
               <!-- MAIL FOMR END -->
               <div class="col-12 col-md-5" style="padding: 3vh">
                 <div class="addresspad">
@@ -354,7 +405,7 @@ const handleFileChange = (event) => {
     <div v-if="loading" class="loading-overlay">
       <div class="loading-content">
         <div class="spinner-border text-light" role="status">
-          <span class="visually-hidden">Loading...</span>
+          <!-- <span class="visually-hidden">Loading...</span> -->
         </div>
         <div class="mt-2 text-light">Sending message...</div>
       </div>
@@ -451,5 +502,41 @@ export default {
   margin-top: 0.25rem;
   font-size: 0.875em;
   color: #dc3545;
+}
+
+.form-wrapper {
+  position: relative;
+}
+
+.form-loading-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 10px;
+}
+
+.alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.alert-success {
+  background-color: rgba(25, 135, 84, 0.1);
+  border: 1px solid #198754;
+  color: #0f5132;
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+  color: #842029;
 }
 </style>

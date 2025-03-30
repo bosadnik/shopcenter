@@ -460,6 +460,8 @@ export default {
         wiadomosc:'Wiadomość',
         akceptujwarunki:'Akceptuję warunki',
         plik:'Plik',
+        "mailwyslany": "Wiadomość została wysłana. Dziękujemy!",
+        "wysylanie": "Wysyłanie wiadomości..."
       }
 
     },

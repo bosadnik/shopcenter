@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "php": "php -S localhost:8000"
   },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
