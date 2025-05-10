@@ -48,7 +48,7 @@ let catalog = [
   },
   {
     name:"Pizzeria Fresca",
-    description:"Budzanów",
+    description:"Budzów",
     folder:"horeca/pizzeria_fresca_budzanow",
     img:"glowne.jpg",
     count: 10,

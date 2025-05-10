@@ -716,7 +716,7 @@ let mainBgs = [mainbg0, mainbg1, mainbg2, mainbg3];
     </div>
 
     <!-- SCREEN 11 -->
-    <div class="row" style="height: 60vh; background-color: white;">
+    <div class="row" style="height: 80vh; background-color: white;">
       <div class="col">
         <div class="row" style="height: 10vh;">
           <div class="col fontBlack text-center" style="padding-top: 5vh;">

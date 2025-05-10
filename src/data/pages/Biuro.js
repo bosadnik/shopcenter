@@ -79,7 +79,7 @@ let catalog = [
 
   {
     name:"Lider branży ubezpieczeniowej",
-    description:"Wrocłas",
+    description:"Wrocław",
     folder:"biura/tue",
     img:"TUE_logo_medium_5.png",
     count: 9,

@@ -184,6 +184,8 @@ export default {
             wiadomosc:'Message',
             akceptujwarunki:'I accept the terms',
             plik:'File',
+                "mailwyslany": "Message sent successfully. Thank you!",
+    "wysylanie": "Sending message..."
           }
     
         
@@ -446,7 +448,7 @@ export default {
         godzinypracy:'Godziny pracy',
         ponnpt: 'Pon.-  pt',
         sbnie: 'Sb.-Nd. nieczynne',
-        znajdznas:'Znajdź nas równie na',
+        znajdznas:'Znajdź nas również na',
         nameRequired: 'Imię i nazwisko jest wymagane',
             phoneRequired: 'Telefon jest wymagany',
             emailRequired: 'Email jest wymagany',
