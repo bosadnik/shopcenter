@@ -6,7 +6,8 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <div id="app">
-    <Nav />
+    <Nav v-if="!isMaxflizPartner" />
+    <NavMaxflix v-else />
     <div class="container-fluid nopadding">
       <router-view v-slot="{ Component }">
         <transition>
@@ -17,7 +18,7 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterView />
       </transition> -->
     </div>
-    <Footer />
+    <Footer v-if="!isMaxflizPartner" />
   </div>
 
   <!-- <header>
@@ -43,6 +44,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <script>
 // @ is an alias to /src
 import Nav from "@/components/Nav.vue";
+import NavMaxflix from "@/components/Nav-maxfliz.vue";
 import Footer from "@/components/Footer.vue";
 // import BR from "@/components/BR.vue"; // Ensure BR component is imported if used
 
@@ -59,9 +61,14 @@ export default {
   },
   components: {
     Nav,
+    NavMaxflix,
     Footer,
-    
   },
+  computed: {
+    isMaxflizPartner() {
+      return this.$route.name === 'maxfliz-partner';
+    }
+  }
 }
 </script>
 

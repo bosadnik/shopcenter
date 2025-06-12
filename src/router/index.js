@@ -41,6 +41,11 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    ,{
+      path: '/maxfliz-partner',
+      name: 'maxfliz-partner',
+      component: () => import('../views/maxfliz-partner.vue'),
+    },
   ],
 })
 

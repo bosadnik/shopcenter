@@ -1,36 +1,36 @@
 export default {
   locale: "pl",
   messages: {
-    
-      "en": {
-        "nav": {
-          "about": "About us",
-          "portfolio": "Portfolio",
-          "contact": "Contact"
-        },
-        "balloons": {
-          "Biuro": "OFFICE",
-          "HoReCa": "HoReCa",
-          "HandelSklepy": "TRADE-STORES",
-          "InvestycjePrywatne": "PRIVATE INVESTMENTS"
-        },
-        "home": {
-          "producentMebli": "Furniture manufacturer",
-          "zPasji": "out of passion...",
-          "mebleOdAdoZ": `Furniture from A<span style="font-size: 0.5em">rrangement</span> to <span style="font-size: 0.5em">Assemb</span>LY!`,
-          "bezwgledu": "Regardless of whether you are arranging a small space at home or a complex business facility, our furniture will certainly be the perfect complement.",
-          "zobacz": "See how we can accomplish your vision in just a few steps.",
-          "konsultacja": "CONSULTATION",
-          "koncepcja": "CONCEPT",
-          "koncepcjaText": "Based on the collected information, we will prepare a design and visualization. We will choose the most convenient proposal and preliminary pricing. This is the perfect time for any adjustments.",
-          "projekt": "PROJECT",
-          "projektText": "If necessary, we will verify the approved design on-site at the investment location to avoid mistakes and additional costs. After this stage, you will receive the final pricing.",
-          "realizacja": "IMPLEMENTATION",
-          "realizacjaText": "After signing the contract, our carpenters get to work! After assembly, you can enjoy an interior tailored to your needs.",
-          "konstrukcje": "STRUCTURES",
-          "stalowe": "STEEL",
-          "konstrukcjeStaloweText": `Steel is a structural material offering immense creative freedom. Thanks to our expertise, experience, and the dedication of highly skilled artisans, the furniture structures we create combine fascinating design with daily-use stability and durability.<br> Our furniture is not only found in <b class="bold">homes</b> but also serves as equipment for prestigious <b class="bold">restaurants</b>, <b class="bold">companies</b>, and <b class="bold">organizations</b>.`,
-          "szukaszNietypowychRozwiazan": `<b class="bold">Looking for</b> unconventional solutions? Contact us!
+
+    "en": {
+      "nav": {
+        "about": "About us",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "balloons": {
+        "Biuro": "OFFICE",
+        "HoReCa": "HoReCa",
+        "HandelSklepy": "TRADE-STORES",
+        "InvestycjePrywatne": "PRIVATE INVESTMENTS"
+      },
+      "home": {
+        "producentMebli": "Furniture manufacturer",
+        "zPasji": "out of passion...",
+        "mebleOdAdoZ": `Furniture from A<span style="font-size: 0.5em">rrangement</span> to <span style="font-size: 0.5em">Assemb</span>LY!`,
+        "bezwgledu": "Regardless of whether you are arranging a small space at home or a complex business facility, our furniture will certainly be the perfect complement.",
+        "zobacz": "See how we can accomplish your vision in just a few steps.",
+        "konsultacja": "CONSULTATION",
+        "koncepcja": "CONCEPT",
+        "koncepcjaText": "Based on the collected information, we will prepare a design and visualization. We will choose the most convenient proposal and preliminary pricing. This is the perfect time for any adjustments.",
+        "projekt": "PROJECT",
+        "projektText": "If necessary, we will verify the approved design on-site at the investment location to avoid mistakes and additional costs. After this stage, you will receive the final pricing.",
+        "realizacja": "IMPLEMENTATION",
+        "realizacjaText": "After signing the contract, our carpenters get to work! After assembly, you can enjoy an interior tailored to your needs.",
+        "konstrukcje": "STRUCTURES",
+        "stalowe": "STEEL",
+        "konstrukcjeStaloweText": `Steel is a structural material offering immense creative freedom. Thanks to our expertise, experience, and the dedication of highly skilled artisans, the furniture structures we create combine fascinating design with daily-use stability and durability.<br> Our furniture is not only found in <b class="bold">homes</b> but also serves as equipment for prestigious <b class="bold">restaurants</b>, <b class="bold">companies</b>, and <b class="bold">organizations</b>.`,
+        "szukaszNietypowychRozwiazan": `<b class="bold">Looking for</b> unconventional solutions? Contact us!
           <ul>
             <li>railings, pergolas</li>
             <li>Openwork walls</li>
@@ -41,10 +41,10 @@ export default {
           </ul>
           <span style="display: flex; justify-content: end; font-weight: bold;">we excel at this!</span>
           `,
-          "fitout": "FIT OUT",
-          "przestrzennanowo": "SPACE REDEFINED",
-          "przestrzennanowoText": `More and more investors opt for fit-out services for offices, commercial spaces, restaurants, and public-use areas. This saves time and reduces formalities by using one professional company that comprehensively prepares the space according to the client's expectations and wishes.`,
-          "przestrzennanowoTextFull": `<b style="font-size: 1.2em;">FIT OUT</b> is a comprehensive service encompassing all <b style="font-size: 1.2em;">stages</b>, we will carry out for you.:
+        "fitout": "FIT OUT",
+        "przestrzennanowo": "SPACE REDEFINED",
+        "przestrzennanowoText": `More and more investors opt for fit-out services for offices, commercial spaces, restaurants, and public-use areas. This saves time and reduces formalities by using one professional company that comprehensively prepares the space according to the client's expectations and wishes.`,
+        "przestrzennanowoTextFull": `<b style="font-size: 1.2em;">FIT OUT</b> is a comprehensive service encompassing all <b style="font-size: 1.2em;">stages</b>, we will carry out for you.:
           <ul style="padding-bottom: 2em;">
             <li>identifying client needs</li>
             <li>preparing a preliminary concept tailored to individual investor needs</li>
@@ -56,31 +56,31 @@ export default {
             <li>managing waste sustainably</li>
           </ul>
           What this means is that the investor no longer needs to oversee work from multiple contractors, such as sanitary, electrical, or construction sectors. All stages are carried out according to a previously agreed budget.`,
-          "wgraportu": `According to a report by the  World Health Organization, 47% of employees admits that work environment impacts on their work duties.`,
-          "odwizualizacji": "FROM VISUALIZATION",
-          "dorealizacji": "TO IMPLEMENTATION...",
-          "nowemiejsce": "New place,",
-          "nowyAdres": "New address!",
-          "przeprowadzka": `<h3>RELOCATION...</h3>
+        "wgraportu": `According to a report by the  World Health Organization, 47% of employees admits that work environment impacts on their work duties.`,
+        "odwizualizacji": "FROM VISUALIZATION",
+        "dorealizacji": "TO IMPLEMENTATION...",
+        "nowemiejsce": "New place,",
+        "nowyAdres": "New address!",
+        "przeprowadzka": `<h3>RELOCATION...</h3>
           <p>Company, restaurant, or perhaps an office move?</p>
           <p>There can be many reasons for deciding to change a company's headquarters. Usually, it is related to growth, the need to attract new clients, or entering a new market.</p>
           <p>No matter the reason, we handle such projects professionally and thoroughly.</p>`,
-          "zmianaLokalizacji": "RELOCATION – step by step",
-          "zaplanowanieHarmonogramu": "1.&nbsp;SCHEDULE PLANNING",
-          "prazzględnieniem": "work considering required permissions and approvals",
-          "inwentaryzacja": "2.&nbsp;INVENTORY",
-          "obecnegoBudynku": "of the current building – potential disposal of used equipment",
-          "przygotowanieizabezpieczenie": "3.&nbsp;PREPARATION AND SECURING",
-          "odsprzetu": "- from equipment to documents and furniture.",
-          "transport": "4.&nbsp;TRANSPORT",
-          "donowejlokalizacji": "to the new location",
-          "montaziaranzacja": "5.&nbsp;INSTALLATION AND ARRANGEMENT",
-          "nowejprzestrzeni": "of the new space",
-          "dajemydrugiezycie": "6.&nbsp;GIVING A SECOND LIFE",
-          "starymmeblom": "to old furniture",
-          "dbamyosrodowisko": `<span style="font-size:0.6em">WE CARE</span><br />ABOUT THE ENVIRONMENT`,
-          "dzialamywbranzy": `Operating in the design and execution industry, we recognize our responsibility in reshaping spaces with a sustainable future in mind. Thus, we assist our clients in waste management.`,
-          "oferujemytakze": `<p>We also offer a <span class="fontGreen">removal service</span> for used furniture for <span class="fontGreen">disposal</span> <img :src="'bg/basket.png'" /> – allowing you to quickly prepare the room for a new arrangement.
+        "zmianaLokalizacji": "RELOCATION – step by step",
+        "zaplanowanieHarmonogramu": "1.&nbsp;SCHEDULE PLANNING",
+        "prazzględnieniem": "work considering required permissions and approvals",
+        "inwentaryzacja": "2.&nbsp;INVENTORY",
+        "obecnegoBudynku": "of the current building – potential disposal of used equipment",
+        "przygotowanieizabezpieczenie": "3.&nbsp;PREPARATION AND SECURING",
+        "odsprzetu": "- from equipment to documents and furniture.",
+        "transport": "4.&nbsp;TRANSPORT",
+        "donowejlokalizacji": "to the new location",
+        "montaziaranzacja": "5.&nbsp;INSTALLATION AND ARRANGEMENT",
+        "nowejprzestrzeni": "of the new space",
+        "dajemydrugiezycie": "6.&nbsp;GIVING A SECOND LIFE",
+        "starymmeblom": "to old furniture",
+        "dbamyosrodowisko": `<span style="font-size:0.6em">WE CARE</span><br />ABOUT THE ENVIRONMENT`,
+        "dzialamywbranzy": `Operating in the design and execution industry, we recognize our responsibility in reshaping spaces with a sustainable future in mind. Thus, we assist our clients in waste management.`,
+        "oferujemytakze": `<p>We also offer a <span class="fontGreen">removal service</span> for used furniture for <span class="fontGreen">disposal</span> <img :src="'bg/basket.png'" /> – allowing you to quickly prepare the room for a new arrangement.
           <BR>Our team handles:
           </p>
           <ul>
@@ -90,9 +90,9 @@ export default {
           </ul>
           <p>of old furniture, creating space for new ones.</p>
           <p>What happens to the items we collect? They are sorted and then prepared for disposal. Recycling enables the recovery of raw materials, which are reused across various industries.</p>`,
-          "policzymyTwojSlad": "We will calculate your carbon footprint",
-          "meblezdrugiejreki": `Second-hand furniture - Your benefits`,
-          "szukaszmeblidoswojegobiura": `<p>Looking for furniture for your office that not only meets your needs but also contributes to protecting our planet?</p>
+        "policzymyTwojSlad": "We will calculate your carbon footprint",
+        "meblezdrugiejreki": `Second-hand furniture - Your benefits`,
+        "szukaszmeblidoswojegobiura": `<p>Looking for furniture for your office that not only meets your needs but also contributes to protecting our planet?</p>
           <p>In the spirit of sustainability, we offer a wide selection of <b class="bold">premium-quality</b> used office furniture from renowned manufacturers, ensuring maximum comfort at work. Designed with modern trends in mind, these pieces perfectly complement various arrangements.</p>
           <p>Visit our store <a href="https://rebench.io" class="scbtnlink bold">rebench.io</a>, where you'll find modern office space furnishing systems at attractive prices.</p>
           <div class="text-center">
@@ -101,31 +101,31 @@ export default {
 	 viewBox="0 0 173.312 173.312" xml:space="preserve">
 <polygon points="137.078,102.745 36.234,0 36.238,143.965 65.559,118.501 87.965,173.312 120.72,159.922 98.315,105.112 "/>
           </div>`,
-          "zaufalinam": "TRUSTED US:",
-          "naszewybranerelizacje": `OUR SELECTED PROJECTS:`,
-        },
-        
-          "onas": {
-            "poznajmysie": "Let's get to know each other",
-            "toprzedewszystkimzespol": `
+        "zaufalinam": "TRUSTED US:",
+        "naszewybranerelizacje": `OUR SELECTED PROJECTS:`,
+      },
+
+      "onas": {
+        "poznajmysie": "Let's get to know each other",
+        "toprzedewszystkimzespol": `
               Above all, it's a long-standing, trusted team of people who passionately create furniture, paying attention to the smallest detail. 
               We understand how important satisfaction with the completed service is, which is why our staff constantly improves their qualifications by following the dynamically changing trends in interior design, participating in industry events, and attending specialized training. 
               Nearly 19 years on the market have allowed us to gain valuable experience and a stable position. But we are not slowing down... Year by year, we expand our offer and increase our scope of operations to meet your expectations. 
               We strive to create a place where you will feel good.
             `,
-            "co": "WHAT",
-            "mozemytobiezaoferowac": `
+        "co": "WHAT",
+        "mozemytobiezaoferowac": `
               WHAT<BR />
               WE<BR />
               CAN OFFER<BR />
               YOU<BR />
               ?
             `,
-            "firmascswiadczyuslugi": `
+        "firmascswiadczyuslugi": `
               Shopcenter provides services in the field of design, production, and installation of personalized interior fittings. 
               Our extensive operations, backed by years of experience, include comprehensive furnishing of:
             `,
-            "firmascswiadczyuslugiExtended": `
+        "firmascswiadczyuslugiExtended": `
               <div style="border: 1px solid white; border-radius: 5px; padding: 10px; padding-left: 20px; font-size: 0.8em; margin-bottom: 3px;">
                 <li> commercial spaces - grocery stores</li>
               </div>
@@ -145,53 +145,83 @@ export default {
                 In addition to commercial activities, we support our clients in designing both the visual aspect and, above all, in selecting technology and planning functionality for specific projects, ensuring compliance with all sanitary regulations (for commercial spaces, restaurants, and healthcare centers) and modern work standards for office spaces.
               </p>
             `,
-            "wliczbach": "IN NUMBERS…",
-            "latdosciadczenia": "YEARS OF EXPERIENCE",
-            "zadowolonychklientow": "SATISFIED CLIENTS",
-            "wykonczonychprzestrzeni": "COMPLETED PUBLIC SPACES",
-            "dostarczonychmebli": "DELIVERED FURNITURE TO HOMES AND APARTMENTS",
-            "wypityczhfilizanek": "CUPS OF COFFEE SHARED WITH OUR CLIENTS"
-          },
-          kontakt:{
-            dzialhandlowy:`SALES DEPARTMENT`,
-            telefon:`phone:`,
-            dzialzakupow:`PURCHASING DEPARTMENT`,
-            dzialprojektu:`PROJECT DEPARTMENT`,
-            dzialfinansowy:`FINANCIAL DEPARTMENT`,
-            produkcjaimontaz:`PRODUCTION AND ASSEMBLY`,
-            skontaktujsieznami:`CONTACT US`,
-            montaz:'assembly',
-            produkcja:'production',
-            imieinazwisko:'Full Name',
-            formtelefon:'Phone',
-            email:'Email',
-            akceptujewarunki:'I consent to the processing of my personal data by SHOPCENTER A. Kusina, P. Iwanek s.c. for marketing purposes',
-            wyslij:'Send',
-            godzinypracy:'Working Hours',
-            ponnpt: 'Mon - Fri',
-            sbnie: 'Sat-Sun: closed',
-            znajdznas:'Find us also on',
-            nameRequired: 'Name is required',
-            phoneRequired: 'Phone is required',
-            emailRequired: 'Email is required',
-            invalidEmail: 'Invalid email format',
-            messageRequired: 'Message is required',
-            termsRequired: 'You must accept the terms',
-            messageSent: 'Message sent successfully!',
-            sendError: 'Failed to send message. Please try again.',
-            fileRequired: 'File is required',
-            fileInvalid: 'Invalid file format. Please upload a PDF, DOC, or DOCX file.',
-            wiadomosc:'Message',
-            akceptujwarunki:'I accept the terms',
-            plik:'File',
-                "mailwyslany": "Message sent successfully. Thank you!",
-    "wysylanie": "Sending message..."
-          }
-    
-        
-        
+        "wliczbach": "IN NUMBERS…",
+        "latdosciadczenia": "YEARS OF EXPERIENCE",
+        "zadowolonychklientow": "SATISFIED CLIENTS",
+        "wykonczonychprzestrzeni": "COMPLETED PUBLIC SPACES",
+        "dostarczonychmebli": "DELIVERED FURNITURE TO HOMES AND APARTMENTS",
+        "wypityczhfilizanek": "CUPS OF COFFEE SHARED WITH OUR CLIENTS"
       },
-      pl: {
+      kontakt: {
+        dzialhandlowy: `SALES DEPARTMENT`,
+        telefon: `phone:`,
+        dzialzakupow: `PURCHASING DEPARTMENT`,
+        dzialprojektu: `PROJECT DEPARTMENT`,
+        dzialfinansowy: `FINANCIAL DEPARTMENT`,
+        produkcjaimontaz: `PRODUCTION AND ASSEMBLY`,
+        skontaktujsieznami: `CONTACT US`,
+        montaz: 'assembly',
+        produkcja: 'production',
+        imieinazwisko: 'Full Name',
+        formtelefon: 'Phone',
+        email: 'Email',
+        akceptujewarunki: 'I consent to the processing of my personal data by SHOPCENTER A. Kusina, P. Iwanek s.c. for marketing purposes',
+        wyslij: 'Send',
+        godzinypracy: 'Working Hours',
+        ponnpt: 'Mon - Fri',
+        sbnie: 'Sat-Sun: closed',
+        znajdznas: 'Find us also on',
+        nameRequired: 'Name is required',
+        phoneRequired: 'Phone is required',
+        emailRequired: 'Email is required',
+        invalidEmail: 'Invalid email format',
+        messageRequired: 'Message is required',
+        termsRequired: 'You must accept the terms',
+        messageSent: 'Message sent successfully!',
+        sendError: 'Failed to send message. Please try again.',
+        fileRequired: 'File is required',
+        fileInvalid: 'Invalid file format. Please upload a PDF, DOC, or DOCX file.',
+        wiadomosc: 'Message',
+        akceptujwarunki: 'I accept the terms',
+        plik: 'File',
+        "mailwyslany": "Message sent successfully. Thank you!",
+        "wysylanie": "Sending message..."
+      },
+      "maxfliz": {
+        "program": "Program",
+        "partner": "Partner",
+        "szukasz": "<span style=\"font-size:larger; font-weight: 400;\">Looking for</span><BR/> custom-made furniture...?",
+        "programmaxflizpartner": "“MAXFLIZ PARTNER” Program\nfree services and additional benefits…",
+        "korzysci": "<span style=\"font-style: italic; font-weight: 400;\">Benefits</span> of joining the program:",
+        "pomiar": "Professional measurement",
+        "dobor": "Material selection",
+        "projekt": "Execution design",
+        "montaz": "Household appliances installation",
+        "rabat": "Discount <span class=\"bold\">10%</span>",
+        "gwarancja": "Warranty<span class=\"bold\"> 3 years</span>",
+        "transport": "Transport within 30 km of Kraków",
+        "realizacawpieciu": "Execution in <span style=\"font-size:larger; font-weight: 400;\">5 steps</span>",
+        "wypelnijformularz": "Fill out the form.",
+        "skontatkujsie": "We’ll get in touch to understand your needs.",
+        "ustaltermin": "We’ll set a measurement appointment.",
+        "przedstawimyci": "We’ll present a concept design and an offer.",
+        "omowimywybrany": "We’ll discuss your preferred date and execution schedule.",
+        "skontaktujsieznami": "Contact us today!",
+        "imie": "First name",
+        "wymagane": "Required",
+        "miasto": "City",
+        "sugerowanedokontatku": "Suggested for contact",
+        "numertelefonu": "Phone number",
+        "adresemail": "Email address",
+        "wiadomosc": "Message",
+        "wyrazamzgode": "I consent to the processing of my personal data for the purposes necessary for contacting Shopcenter.pl (in accordance with the Personal Data Protection Act of August 29, 1997; consolidated text: Journal of Laws 2002 No. 101, item 926 as amended)",
+        "naszerealizacje": "Our projects..."
+      }
+
+
+
+    },
+    pl: {
       nav: {
         about: "O nas",
         portfolio: "Portfolio",
@@ -361,12 +391,12 @@ export default {
 </svg></span>
 
             </div>`,
-         zaufalinam: `ZAUFALI NAM:`,
-         naszewybranerelizacje: `NASZE WYBRANE REALIZACJE:`,
+        zaufalinam: `ZAUFALI NAM:`,
+        naszewybranerelizacje: `NASZE WYBRANE REALIZACJE:`,
       },
       onas: {
         poznajmysie: "Poznajmy się",
-        toprzedewszystkimzespol:`
+        toprzedewszystkimzespol: `
                           to przede wszystkich długoletni, zaufany zespół ludzi, którzy z pasją tworzą meble, dbając o
                   najmniejszy szczegół. Wiemy, jak bardzo ważna jest satysfakcja z wykonanej usługi, dlatego nasza kadra
                   nieustannie podnosi swoje kwalifikacje śledząc dynamicznie zmieniające się trendy w aranżacji wnętrz,
@@ -377,8 +407,8 @@ export default {
                   Pragniemy tworzyć dla Państwa miejsce, w którym będziecie czuć się dobrze.
 
                   `,
-         co:'CO',
-         mozemytobiezaoferowac:`
+        co: 'CO',
+        mozemytobiezaoferowac: `
                            MOŻEMY<BR />
                   TOBIE<BR />
                   ZAOFEROWAĆ<BR />
@@ -386,10 +416,10 @@ export default {
 
 
          `,
-         firmascswiadczyuslugi:`Firma Shopcenter świadczy usługi w zakresie projektowania, produkcji oraz montażu spersonalizowanego
+        firmascswiadczyuslugi: `Firma Shopcenter świadczy usługi w zakresie projektowania, produkcji oraz montażu spersonalizowanego
                   wyposażenia wnętrz. Szeroki zakres naszej działalności poparty wieloletnim doświadczeniem, obejmuje
                   kompleksowe wyposażenie:`,
-          firmascswiadczyuslugiExtended:`
+        firmascswiadczyuslugiExtended: `
                <div style="  border: 1px solid white;border-radius: 5px;padding: 10px;padding-left: 20px;font-size: 0.8em;margin-bottom: 3px;">
                   <li> obiektów handlowych - sklepy spożywcze</li>
                 </div>
@@ -419,51 +449,87 @@ export default {
                   oraz nowoczesnych standardów pracy dla przestrzeni biurowych.
                 </p>
                 `,
-          wliczbach:`W LICZBACH…`,
-          latdosciadczenia:'LAT DOŚWIADCZENIA',
-          zadowolonychklientow:'ZADOWOLONYCH KLIENTÓW',
-          wykonczonychprzestrzeni:'WYKOŃCZONYCH PRZESTRZENI PUBLICZNYCH',
-          dostarczonychmebli:`DOSTARCZONYCH MEBLI DO DOMÓW
+        wliczbach: `W LICZBACH…`,
+        latdosciadczenia: 'LAT DOŚWIADCZENIA',
+        zadowolonychklientow: 'ZADOWOLONYCH KLIENTÓW',
+        wykonczonychprzestrzeni: 'WYKOŃCZONYCH PRZESTRZENI PUBLICZNYCH',
+        dostarczonychmebli: `DOSTARCZONYCH MEBLI DO DOMÓW
                                   I MIESZKAŃ`,
-          wypityczhfilizanek:`WYPITYCH FILIŻANEK KAWY Z NASZYMI KLIENTAMI`                                  
+        wypityczhfilizanek: `WYPITYCH FILIŻANEK KAWY Z NASZYMI KLIENTAMI`
 
 
-          
+
       },
-      kontakt:{
-        dzialhandlowy:`DZIAŁ HANDLOWY`,
-        telefon:`telefon:`,
-        dzialzakupow:`DZIAŁ ZAKUPÓW`,
-        dzialprojektu:`DZIAŁ PROJEKTU`,
-        dzialfinansowy:`DZIAŁ FINANSOWY`,
-        produkcjaimontaz:`PRODUKCJA I MONTAŻ`,
-        skontaktujsieznami:`SKONTAKTUJ SIĘ Z NAMI`,
-        montaz:'montaż',
-        produkcja:'produkcja',
-        imieinazwisko:'Imię i nazwisko',
-        formtelefon:'Telefon',
-        email:'Email',
-        akceptujewarunki:'Wyrażam zgodę na przetwarzanie moich danych osobowych przez SHOPCENTER A. Kusina, P. Iwanek s.c. w celach marketingowych',
-        wyslij:'Wyślij',
-        godzinypracy:'Godziny pracy',
+      kontakt: {
+        dzialhandlowy: `DZIAŁ HANDLOWY`,
+        telefon: `telefon:`,
+        dzialzakupow: `DZIAŁ ZAKUPÓW`,
+        dzialprojektu: `DZIAŁ PROJEKTU`,
+        dzialfinansowy: `DZIAŁ FINANSOWY`,
+        produkcjaimontaz: `PRODUKCJA I MONTAŻ`,
+        skontaktujsieznami: `SKONTAKTUJ SIĘ Z NAMI`,
+        montaz: 'montaż',
+        produkcja: 'produkcja',
+        imieinazwisko: 'Imię i nazwisko',
+        formtelefon: 'Telefon',
+        email: 'Email',
+        akceptujewarunki: 'Wyrażam zgodę na przetwarzanie moich danych osobowych przez SHOPCENTER A. Kusina, P. Iwanek s.c. w celach marketingowych',
+        wyslij: 'Wyślij',
+        godzinypracy: 'Godziny pracy',
         ponnpt: 'Pon.-  pt',
         sbnie: 'Sb.-Nd. nieczynne',
-        znajdznas:'Znajdź nas również na',
+        znajdznas: 'Znajdź nas również na',
         nameRequired: 'Imię i nazwisko jest wymagane',
-            phoneRequired: 'Telefon jest wymagany',
-            emailRequired: 'Email jest wymagany',
-            invalidEmail: 'Nieprawidłowy format email',
-            messageRequired: 'Wiadomość jest wymagana',
-            termsRequired: 'Musisz zaakceptować warunki',
-            messageSent: 'Wiadomość wysłana pomyślnie!',
-            sendError: 'Problem z wysłaniem wiadomości. Proszę spróbować ponownie.',
-            fileRequired: 'Plik jest wymagany',
-            fileInvalid: 'Nieprawidłowy format pliku. Proszę przesłać plik PDF, DOC lub DOCX',
-        wiadomosc:'Wiadomość',
-        akceptujwarunki:'Akceptuję warunki',
-        plik:'Plik',
+        phoneRequired: 'Telefon jest wymagany',
+        emailRequired: 'Email jest wymagany',
+        invalidEmail: 'Nieprawidłowy format email',
+        messageRequired: 'Wiadomość jest wymagana',
+        termsRequired: 'Musisz zaakceptować warunki',
+        messageSent: 'Wiadomość wysłana pomyślnie!',
+        sendError: 'Problem z wysłaniem wiadomości. Proszę spróbować ponownie.',
+        fileRequired: 'Plik jest wymagany',
+        fileInvalid: 'Nieprawidłowy format pliku. Proszę przesłać plik PDF, DOC lub DOCX',
+        wiadomosc: 'Wiadomość',
+        akceptujwarunki: 'Akceptuję warunki',
+        plik: 'Plik',
         "mailwyslany": "Wiadomość została wysłana. Dziękujemy!",
         "wysylanie": "Wysyłanie wiadomości..."
+      },
+      maxfliz: {
+        program: 'Program',
+        partner: 'Partner',
+        szukasz: `<span style="font-size:larger; font-weight: 400;">Szukasz</span><BR/> mebli na wymiar...?`,
+        programmaxflizpartner: `Program
+                „MAXFLIZ PARTNER”
+                darmowe usługi i dodatkowe korzyści…`,
+        korzysci: `<span style="font-style: italic; font-weight: 400;">Korzyści</span> udziału w programie:`,
+        pomiar: `Profesjonalny pomiar`,
+        dobor: `Dobór materiałów`,
+        projekt: `Projekt wykonawczy`,
+        montaz: `Montaż urządzeń AGD`,
+        rabat: `Rabat <span class="bold">10%</span>`,
+        gwarancja: `Gwarancja<span class="bold"> 3 lata</span>`,
+        transport: `Transport do 30 km od Krakowa`,
+        realizacawpieciu: `Realizacja w <span style="font-size:larger; font-weight: 400;">5 krokach</span>`,
+        wypelnijformularz: `Wypełnij formularz.`,
+        skontatkujsie: `Skontaktujemy się w celu poznania Twoich potrzeb.`,
+        ustaltermin: `Ustalimy termin pomiaru.`,
+        przedstawimyci: `Przedstawimy Ci projekt koncepcyjny oraz ofertę.`,
+        omowimywybrany: `Omówimy wybrany termin oraz harmonogram realizacji.`,
+        skontaktujsieznami: `Skontaktuj się z nami już dziś!`,
+        imie: `Imię`,
+        wymagane: `Wymagane`,
+        miasto: `Miasto`,
+        sugerowanedokontatku: `Sugerowany do kontaktu`,
+        numertelefonu: `Numer telefonu`,
+        adresemail: `Adres email`,
+        wiadomosc: `Wiadomość`,
+        wyrazamzgode: `Wyrażam zgodę na
+                                        przetwarzanie moich danych osobowych dla potrzeb niezbędnych do procesu kontaktu
+                                        z Shopcenter.pl (zgodnie z Ustawą z dnia 29.08.1997 roku o Ochronie Danych
+                                        Osobowych; tekst jednolity: Dz. U. z 2002r. Nr 101, poz. 926 ze zm.)`,
+        naszerealizacje: `Nasze realizacje...`
+
       }
 
     },

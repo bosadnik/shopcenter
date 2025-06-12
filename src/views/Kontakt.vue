@@ -20,6 +20,8 @@ const errors = ref({})
 const showSuccessMessage = ref(false)
 const errorMessage = ref('')
 
+const API_ENDPOINT = import.meta.env.DEV ? 'http://localhost:8000/mailsend.php' : '/mailsend.php';
+
 const validateEmail = (email) => {
   return String(email)
     .toLowerCase()
@@ -90,7 +92,7 @@ const handleSubmit = async () => {
 
     console.log('Sending data with file:', fileData ? 'yes' : 'no');
 
-    const response = await fetch('http://localhost:8000/mailsend.php', {
+    const response = await fetch(API_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -37,7 +37,7 @@ $response = array(
 );
 
 // Validate required fields
-if (empty($data['name']) || empty($data['email']) || empty($data['phone']) || empty($data['message'])) {
+if (empty($data['name']) || empty($data['email']) || empty($data['city']) || empty($data['message'])) {
     $response['message'] = 'All fields are required';
     echo json_encode($response);
     exit;
@@ -53,6 +53,7 @@ if (!validateEmail($data['email'])) {
 // Sanitize inputs
 $name = sanitizeInput($data['name']);
 $email = sanitizeInput($data['email']);
+$city = sanitizeInput($data['city']);
 $phone = sanitizeInput($data['phone']);
 $message = sanitizeInput($data['message']);
 
@@ -61,9 +62,10 @@ $to = "bartlomiej@osadnik.com"; // Changed recipient email
 $subject = "New Contact Form Submission from " . $name;
 
 // Prepare email content
-$emailContent = "Name: $name\n";
+$emailContent = "Imię: $name\n";
 $emailContent .= "Email: $email\n";
-$emailContent .= "Phone: $phone\n\n";
+$emailContent .= "Telefon: $phone\n\n";
+$emailContent .= "Miasto: $city\n\n";
 $emailContent .= "Message:\n$message";
 
 
@@ -92,13 +94,14 @@ try {
 
     $emailFrom = 'Web.kontakt@shopcenter.pl';
 
-    $mail->setFrom($emailFrom, 'Kontakt Formularz');
-    // $mail->addAddress('bartlomiej.osadnik@gmail.com');
-    $mail->addAddress('bartlomiej@osadnik.com');
+    $mail->setFrom($emailFrom, 'Maxflix Partner Formularz');
+    $mail->addAddress('mariusz.grzesiak@maxfliz.pl');
+
+    $mail->addAddress('malgorzata@shopcenter.pl');
     $mail->addAddress('piotr@shopcenter.pl');
     
 
-    $mail->Subject = 'Wiadomość ze strony www.shopcenter.pl';
+    $mail->Subject = 'Wiadomość ze strony www.shopcenter.pl - Maxfliz Partner';
     
     // Set proper email format
     $mail->isHTML(false);                    // Set email format to plain text

@@ -1,6 +1,6 @@
 <template>
   <div class="header-bar">
-    <div :class="[{ 'container': $route.name === 'maxflix-partner', 'container-fluid': $route.name !== 'maxflix-partner' }]">
+    <div class="container nav-maxfliz">
       <nav class="navbar navbar-expand-lg navbar-dark">
         <router-link to="/" class="navbar-brand">
           <svg
@@ -96,53 +96,13 @@
         </router-link>
         <h5 class="white font-spreded fdandp" >FURNITURE DESIGN & PRODUCTION
                 </h5>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+        <div class="menu" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-           <!-- <li class="nav-item">
-              <router-link to="/allHome" class="nav-link">allHome</router-link>
-            </li> -->
-
-            <!-- <li class="nav-item">
-              <router-link to="/onas" class="nav-link">{{$t('nav.about')}}</router-link>
-            </li> -->
-            <li class="nav-item">
-              <router-link to="/portfolio" class="nav-link">{{$t('nav.portfolio')}}</router-link>
-            </li>
-
-            <!-- <li class="nav-item">
-              <router-link to="/dlaarchitektow" class="nav-link"
-                >dla architektów</router-link
-              >
-            </li> -->
-            <li class="nav-item">
-              <router-link to="/kontakt" class="nav-link">{{$t('nav.contact')}}</router-link>
-            </li>
             <li class="nav-item">
               <DIV class="nav-link" @click="changeLanguage">{{getTranslateLinkName().toUpperCase()}}</DIV>
             </li>
-
-            <!-- <li class="nav-item">
-              <a href="http://facebook.com"
-                ><div class="nav-link">
-                  <font-awesome-icon
-                    :icon="{ prefix: 'fab', iconName: 'facebook-f' }"
-                  /></div
-              ></a>
-            </li> -->
           </ul>
-        </div>
+        </div>             
       </nav>
     </div>
   </div>
@@ -203,7 +163,13 @@ export default {
   color: red !important;
 }
 .header-bar {
-  background: rgb(0, 0, 0);
+  /* background: rgb(0, 0, 0); */
+}
+
+.nav-maxfliz{
+  background-color: #000000;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .sc_logo_top {
@@ -237,18 +203,21 @@ export default {
 
 .menu{
   margin-top: 80px;
+  margin-left: auto;
+  display: flex;
 }
 
 /* Medium screens */
 @media screen and (max-width: 992px) {
   .sc_logo_top {
-    height: 120px;
+    height: 140px;
+    margin-left: -15px;
   }
 
   .fdandp{
     font-size: 0.8em;
     position: absolute;
-              left: 220px;
+              left: 150px;
               top: 80px;
   }
   .menu{
@@ -256,23 +225,42 @@ export default {
   }
 }
 /* Small screens */
-@media screen and (max-width: 768px) {
+ @media screen and (max-width: 768px) {
   .sc_logo_top {
-    height: 90px;
+    height: 120px;
     margin-left: -15px;
-  }
+  } 
   .fdandp{
-  font-size: 0.65em;
-  position: absolute;
-            left: 90px;
-            top: 50px;
+  font-size: 0.6em;
+   position: absolute;
+            left: 120px;
+            top: 70px; 
 }
     .font-spreded{
-      letter-spacing: 0.01em;
+      letter-spacing: 0.2em;
     }
 
+} 
+
+@media screen and (max-width: 390px) {
+  .sc_logo_top {
+    height: 100px;
+    margin-left: -15px;
+  } 
+  .fdandp{
+  font-size: 0.5em;
+   position: absolute;
+            left: 105px;
+            top: 55px; 
+}
+    .font-spreded{
+      letter-spacing: 0.2em;
+    }
+.nav-link{
+  font-size: 0.7em;
 }
 
+} 
 
 
 
