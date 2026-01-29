@@ -6,6 +6,17 @@ function hashString(str) {
   return hash >>> 0; // Ensure positive integer
 }
 
+// Helper function to get WebP path with fallback
+function getWebPPath(originalPath) {
+  if (!originalPath) return { webp: '', fallback: '' };
+  // Replace extension with .webp
+  const webpPath = originalPath.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+  return {
+    webp: webpPath,
+    fallback: originalPath
+  };
+}
+
 export default class {
   constructor({ title = "title", color = "white", catalog }) {
     if (!catalog) catalog = [];
@@ -30,35 +41,45 @@ export default class {
 
       for (let i = 1; i <= item.count; i++) {
         try {
+          const largePath = `/portfolio/${item.folder}/${getImageName(
+            item.imagesName,
+            item.imagesLargeName,
+            i,
+            item.imagesFormat,
+            item.noSizeInName
+          )}`;
+          const thumbnailPath = `/portfolio/${item.folder}/${getImageName(
+            item.imagesName,
+            item.imagesThumbnailName,
+            i,
+            item.imagesFormat,
+            item.noSizeInName
+          )}`;
+          
+          const largeWebP = getWebPPath(largePath);
+          const thumbnailWebP = getWebPPath(thumbnailPath);
+          
           item.images.push({
-            src:`/portfolio/${item.folder}/${getImageName(
-              item.imagesName,
-              item.imagesLargeName,
-              i,
-              item.imagesFormat,
-              item.noSizeInName
-            )}`, 
-            thumbnail:`/portfolio/${item.folder}/${getImageName(
-              item.imagesName,
-              item.imagesThumbnailName,
-              i,
-              item.imagesFormat,
-              item.noSizeInName
-            )}`, 
+            src: largePath,
+            srcWebP: largeWebP.webp,
+            thumbnail: thumbnailPath,
+            thumbnailWebP: thumbnailWebP.webp,
             title: `${item.imagesName}${i}.${item.imagesFormat}`,
             index: i,
             w: 2000,
             h: 2000
           });
 
-          item.imgs.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesLargeName, i, item.imagesFormat, item.noSizeInName)}`);
+          // For lightbox, prefer WebP but keep fallback
+          item.imgs.push(largeWebP.webp || largePath);
         } catch (e) {
          // console.log(e);
         }
 
         try {
-          item.thumbnails.push(`/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesThumbnailName,i,item.imagesFormat,item.noSizeInName)}`,
-          );
+          const thumbPath = `/portfolio/${item.folder}/${getImageName(item.imagesName,item.imagesThumbnailName,i,item.imagesFormat,item.noSizeInName)}`;
+          const thumbWebP = getWebPPath(thumbPath);
+          item.thumbnails.push(thumbWebP.webp || thumbPath);
         } catch (e) {
           //console.log(e);
         }

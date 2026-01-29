@@ -19,7 +19,7 @@
                                 v-for="item in catalog" 
                                 :key="item.key"
                                 :linkTo="`/portfolio/${branch}/${item.key}`"
-                                :imgUrl="`${item.folder}/${item.img}`"
+                                :imgUrl="`portfolio/${item.folder}/${item.img}`"
                                 :name="item.name"
                                 :description="item.description"
                                 nameClass="nameClass"

@@ -20,14 +20,29 @@
                         <div class="row">
                             
                             <FsLightbox
+                                v-if="lightboxMounted"
                                 :toggler="toggler"
                                 :sources="page.imgs"
                                 :slide="slide"
                             />
                             
-                            <div class="col-md-4 col-6 col-thumbnail" v-for="(img) in page.images" :key="img.index"
-                                @click="openLightboxOnSlide(img.index)">
-                                <img :src="img.thumbnail" class="img-fluid thumbnail" />
+                            <div
+                                class="col-md-4 col-6 col-thumbnail"
+                                v-for="(img) in page.images"
+                                :key="img.index"
+                                @mouseenter="preloadLarge(img.index)"
+                                @focus="preloadLarge(img.index)"
+                                @click="openLightboxOnSlide(img.index)"
+                            >
+                                <picture>
+                                    <source :srcset="img.thumbnailWebP" type="image/webp" />
+                                    <img
+                                        :src="img.thumbnail"
+                                        class="img-fluid thumbnail"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
                             </div>
                         </div>
                     </div>
@@ -76,17 +91,46 @@ const getPageData = (branch, p) => {
 
     let page = branch.catalog.filter(item => item.key == p)[0];
 
-    return { ...branch, 'page': { ...page }, idx: null, toggler: false, slide: 0 };
+    return { ...branch, 'page': { ...page }, idx: null, toggler: false, slide: 0, lightboxMounted: false };
 }
 
 export default {
     name: "ProtfolioBranchPage",
     components: { Baloons, FsLightbox },
     data: function () {
-        return getPageData(this.$route.params.branch, this.$route.params.page);
+        return { ...getPageData(this.$route.params.branch, this.$route.params.page), preloadedLarge: {} };
+    },
+    mounted() {
+        // Warm up the first large image during idle time to speed up the first lightbox open,
+        // without aggressively downloading the whole gallery.
+        const run = () => this.preloadLarge(1);
+        if (typeof window !== 'undefined' && typeof window.requestIdleCallback === 'function') {
+            window.requestIdleCallback(run, { timeout: 1500 });
+        } else {
+            setTimeout(run, 300);
+        }
     },
     methods: {
+        preloadLarge: function (number) {
+            // FsLightbox slide numbers are 1-based in our data model; page.imgs is a 0-based array.
+            if (!number || this.preloadedLarge[number]) return;
+            const imgData = this.page && this.page.images ? this.page.images[number - 1] : null;
+            if (!imgData) return;
+
+            this.preloadedLarge[number] = true;
+            // Prefer WebP, fallback to original
+            const url = imgData.srcWebP || imgData.src;
+            if (!url) return;
+
+            const img = new Image();
+            // Hint to browsers that support it
+            try { img.decoding = 'async'; } catch (e) {}
+            img.src = url;
+        },
         openLightboxOnSlide: function(number) {
+                this.lightboxMounted = true;
+                // Start fetching the clicked large image ASAP (even if lightbox UI opens immediately)
+                this.preloadLarge(number);
                 this.idx = number;
 				this.slide = number;
 				this.toggler = !this.toggler;

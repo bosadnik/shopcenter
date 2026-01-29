@@ -5,8 +5,11 @@
                 <h1 :class="nameClass">{{ name }}</h1>
                 <div :class="descriptionClass">{{ description }}</div>
             </div>
-            <div class="portfolioBoxSmall"
-                :style="{ backgroundImage: `url('${imgUrl}')` }">
+            <div class="portfolioBoxSmall">
+                <picture>
+                    <source :srcset="resolvedImgUrlWebP" type="image/webp" />
+                    <img :src="resolvedImgUrl" alt="" loading="lazy" decoding="async" />
+                </picture>
             </div>
 
         </router-link>
@@ -48,6 +51,28 @@ export default {
             required: false
         },
     },
+    computed: {
+        resolvedImgUrl() {
+            // Ensure stable absolute URL in history-mode routing (e.g. /portfolio/...),
+            // while keeping external URLs intact.
+            if (!this.imgUrl) return '';
+            if (this.imgUrl.startsWith('http://') || this.imgUrl.startsWith('https://') || this.imgUrl.startsWith('//')) {
+                return this.imgUrl;
+            }
+            return this.imgUrl.startsWith('/') ? this.imgUrl : `/${this.imgUrl}`;
+        },
+        resolvedImgUrlWebP() {
+            // Get WebP version of the image path
+            const original = this.resolvedImgUrl;
+            if (!original) return '';
+            // Skip WebP conversion for external URLs
+            if (original.startsWith('http://') || original.startsWith('https://') || original.startsWith('//')) {
+                return '';
+            }
+            // Replace extension with .webp
+            return original.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+        }
+    },
     data: function () {
         return {}
     },
@@ -67,12 +92,30 @@ export default {
     opacity: 0.5;
     transition: opacity 0.3s ease-in;
     cursor: pointer;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     text-align: center;
     margin-left: -15px;
     margin-right: -15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolioBoxSmall picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.portfolioBoxSmall img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 
